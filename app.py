@@ -1,9 +1,9 @@
 import streamlit as st
 import random
 
-# ===================================================
+# ==================================================
 # PAGE CONFIG
-# ===================================================
+# ==================================================
 
 st.set_page_config(
     page_title="For My Bubuu ❤️",
@@ -13,16 +13,50 @@ st.set_page_config(
 )
 
 
-# ===================================================
+# ==================================================
+# PERSONALIZE HERE ❤️
+# ==================================================
+
+GIRLFRIEND_NAME = "My Bubuu ❤️"
+YOUR_NAME = "Karan ❤️"
+
+
+REASONS = [
+    "Your smile makes even my worst days better.",
+    "You make ordinary moments feel special.",
+    "I love how comfortable I feel with you.",
+    "You are the person I want to share everything with.",
+    "Even our silly conversations mean so much to me.",
+    "You have become such a beautiful part of my life."
+]
+
+
+LOVE_MESSAGES = [
+    "You are my favourite notification. ❤️",
+    "I still smile when I see your name on my phone. 🥰",
+    "You are my favourite person to annoy. 😂❤️",
+    "If I had to choose again, I would still choose you. ❤️",
+    "My day feels better when I talk to you. 💕",
+    "You make my ordinary days feel special. ✨",
+    "You are one of my favourite things about my life. ❤️"
+]
+
+
+# ==================================================
 # CUSTOM CSS
-# ===================================================
+# ONLY FOR PAGE AND BUTTON DESIGN
+# ==================================================
 
 st.markdown("""
 <style>
 
 .stApp {
-    background: linear-gradient(135deg, #fff0f5, #ffe4ec, #fce4ec);
-    color: #4a1f2a;
+    background: linear-gradient(
+        135deg,
+        #fff5f8,
+        #ffe9f0,
+        #fff0f5
+    );
 }
 
 #MainMenu {
@@ -38,455 +72,214 @@ header {
 }
 
 .block-container {
+    max-width: 700px;
     padding-top: 2rem;
     padding-bottom: 3rem;
-    max-width: 750px;
 }
-
-/* Main Title */
-
-.main-title {
-    text-align: center;
-    font-size: clamp(2.3rem, 9vw, 4.5rem);
-    font-weight: 800;
-    color: #e63964;
-    margin-bottom: 0;
-}
-
-.subtitle {
-    text-align: center;
-    font-size: clamp(1rem, 4vw, 1.4rem);
-    color: #7d3146;
-    margin-bottom: 2rem;
-}
-
-/* Love Card */
-
-.love-card {
-    background: rgba(255, 255, 255, 0.88);
-    padding: 25px;
-    border-radius: 25px;
-    margin: 20px 0;
-    box-shadow: 0 8px 30px rgba(230, 57, 100, 0.15);
-    border: 1px solid rgba(230, 57, 100, 0.15);
-}
-
-.card-title {
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: #e63964;
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-.love-text {
-    font-size: 1.08rem;
-    line-height: 1.8;
-    text-align: center;
-    color: #542633;
-}
-
-/* Reasons */
-
-.reason {
-    background: white;
-    padding: 18px;
-    margin: 12px 0;
-    border-radius: 18px;
-    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
-    font-size: 1rem;
-}
-
-/* Buttons */
 
 .stButton > button {
     width: 100%;
-    border-radius: 15px;
+    border-radius: 18px;
     padding: 14px;
-    font-size: 1.05rem;
+    font-size: 17px;
     font-weight: 700;
     border: none;
-    background: linear-gradient(90deg, #e63964, #ff6b8a);
+    background: linear-gradient(
+        135deg,
+        #e63970,
+        #ff6b95
+    );
     color: white;
-    transition: 0.3s;
 }
 
 .stButton > button:hover {
     transform: scale(1.02);
-    box-shadow: 0 8px 20px rgba(230, 57, 100, 0.3);
-}
-
-/* Footer */
-
-.footer {
-    text-align: center;
-    margin-top: 40px;
-    color: #8b4a5c;
-    font-size: 0.95rem;
-}
-
-/* Floating Hearts */
-
-.heart {
-    position: fixed;
-    font-size: 25px;
-    animation: float 7s linear infinite;
-    z-index: -1;
-    opacity: 0.5;
-}
-
-@keyframes float {
-
-    0% {
-        transform: translateY(100vh) rotate(0deg);
-        opacity: 0;
-    }
-
-    20% {
-        opacity: 0.6;
-    }
-
-    100% {
-        transform: translateY(-10vh) rotate(360deg);
-        opacity: 0;
-    }
 }
 
 </style>
 """, unsafe_allow_html=True)
 
 
-# ===================================================
-# FLOATING HEARTS
-# ===================================================
+# ==================================================
+# HERO SECTION
+# ==================================================
 
-st.markdown("""
-<div class="heart" style="left:5%; animation-delay:0s;">❤️</div>
-<div class="heart" style="left:15%; animation-delay:2s;">💖</div>
-<div class="heart" style="left:30%; animation-delay:4s;">💕</div>
-<div class="heart" style="left:45%; animation-delay:1s;">❤️</div>
-<div class="heart" style="left:60%; animation-delay:3s;">💗</div>
-<div class="heart" style="left:75%; animation-delay:5s;">💖</div>
-<div class="heart" style="left:90%; animation-delay:2s;">💕</div>
-""", unsafe_allow_html=True)
+st.markdown("# ❤️")
 
+st.markdown(
+    f"# Hey {GIRLFRIEND_NAME}"
+)
 
-# ===================================================
-# ❤️ PERSONAL DETAILS - EDIT THESE
-# ===================================================
+st.caption("I made this little place just for you 🥰")
 
-GIRLFRIEND_NAME = "My Bubuu ❤️"
-
-YOUR_NAME = "Karan ❤️"
+st.divider()
 
 
-# ===================================================
-# ❤️ REASONS WHY I LOVE YOU - EDIT THESE
-# ===================================================
-
-REASONS = [
-
-    "❤️ Your smile makes even my worst days better.",
-
-    "🥰 You make me feel loved in ways I never knew were possible.",
-
-    "💖 Your presence brings peace to my heart.",
-
-    "✨ Every memory with you becomes one of my favourite memories.",
-
-    "🤍 I can be myself when I am with you.",
-
-    "🌍 No matter where life takes us, you will always have a special place in my heart."
-]
-
-
-# ===================================================
-# HEADER
-# ===================================================
-
-st.markdown(f"""
-<div class="main-title">
-    Hey {GIRLFRIEND_NAME}
-</div>
-
-<div class="subtitle">
-    I made something special just for you 🥰
-</div>
-""", unsafe_allow_html=True)
-
-
-# ===================================================
+# ==================================================
 # OPENING MESSAGE
-# ===================================================
+# ==================================================
 
-st.markdown("""
-<div class="love-card">
+with st.container(border=True):
 
-    <div class="card-title">
-        💌 A Little Message For You
-    </div>
+    st.markdown("## 💌 A Little Message For You")
 
-    <div class="love-text">
+    st.write(
+        """
+I don't think words will ever be enough to explain how much you mean to me.
 
-        I don't think words will ever be enough to explain
-        how much you mean to me.
+You are not just someone I love. You have become such an important part
+of my life, my happiness, my thoughts and my heart.
 
-        <br><br>
-
-        You are not just someone I love.
-        You are someone who has become a very important part
-        of my life, my thoughts, my happiness, and my heart.
-
-        <br><br>
-
-        No matter how many times I say
-        <b>"I love you"</b>,
-        it will probably never fully explain
-        how deeply I feel about you. ❤️
-
-    </div>
-
-</div>
-""", unsafe_allow_html=True)
+No matter how many times I say "I love you", I don't think those words
+will ever fully explain how deeply I feel about you. ❤️
+"""
+    )
 
 
-# ===================================================
+# ==================================================
 # HOW MUCH I LOVE YOU
-# ===================================================
+# ==================================================
 
-st.markdown("### ❤️ Click the button if you want to know something")
+st.markdown("## ❤️ Something You Should Know")
 
 if st.button("How much do I love you? ❤️"):
 
     st.balloons()
 
-    st.markdown("""
-    <div class="love-card">
+    with st.container(border=True):
 
-        <div class="card-title">
-            The Answer ❤️
-        </div>
+        st.markdown("## More Than You Know ❤️")
 
-        <div class="love-text">
+        st.write(
+            """
+More than I can explain.
 
-            More than I can explain.
+More than I can put into words.
 
-            <br>
+More than yesterday.
 
-            More than I can put into words.
+And hopefully even more tomorrow. ❤️
 
-            <br>
-
-            More than yesterday.
-
-            <br>
-
-            And I hope to love you even more tomorrow. ❤️
-
-            <br><br>
-
-            If love could be measured,
-            I still don't think there would be a number big enough
-            to describe what I feel for you. 🥺❤️
-
-        </div>
-
-    </div>
-    """, unsafe_allow_html=True)
+If love could be measured, I still don't think there would be a number
+big enough to describe what I feel for you. 🥺❤️
+"""
+        )
 
 
-# ===================================================
+# ==================================================
 # REASONS WHY I LOVE YOU
-# ===================================================
+# ==================================================
 
-st.markdown("""
-<div class="love-card">
+st.markdown("## 🥰 Reasons Why I Love You")
 
-    <div class="card-title">
-        ❤️ Some Reasons Why I Love You
-    </div>
+for number, reason in enumerate(REASONS, start=1):
 
-</div>
-""", unsafe_allow_html=True)
+    with st.container(border=True):
 
+        st.markdown(f"### 💗 {number}")
 
-for reason in REASONS:
-
-    st.markdown(f"""
-    <div class="reason">
-        {reason}
-    </div>
-    """, unsafe_allow_html=True)
+        st.write(reason)
 
 
-# ===================================================
+# ==================================================
 # WHEN YOU MISS ME
-# ===================================================
+# ==================================================
 
 st.markdown("## 🥺 When You Miss Me")
 
-
 if st.button("Click here when you miss me 🤍"):
 
-    st.markdown("""
-<div class="love-card">
+    with st.container(border=True):
 
-<div class="card-title">
-Come Here 🤗❤️
-</div>
+        st.markdown("## Come Here 🤗❤️")
 
-<div class="love-text">
+        st.write(
+            """
+If you are missing me right now, I want you to remember one thing.
 
-If you are missing me right now,
-just remember this... ❤️
-
-<br><br>
-
-Somewhere, no matter what I am doing,
-there is a person thinking about you.
-
-<br><br>
+No matter where I am or what I am doing, there is always someone
+thinking about you.
 
 Me. ❤️
 
-<br><br>
-
-And I hope you know that you can always come to me,
-talk to me, laugh with me, cry with me,
-and share every little thing with me.
-
-<br><br>
+You can always come to me, talk to me, laugh with me,
+cry with me and share everything with me.
 
 You never have to feel alone when you have me. 🤍
-
-</div>
-
-</div>
-""", unsafe_allow_html=True)
+"""
+        )
 
 
-# ===================================================
-# RANDOM LOVE MESSAGE
-# ===================================================
+# ==================================================
+# SURPRISE MESSAGE
+# ==================================================
 
-st.markdown("## 💕 A Message Just For You")
+st.markdown("## 💕 A Little Surprise")
 
+if st.button("Click for a message from me 💌"):
 
-love_messages = [
+    with st.container(border=True):
 
-    "You are my favourite notification. ❤️",
+        message = random.choice(LOVE_MESSAGES)
 
-    "My day becomes better when I talk to you. 🥰",
+        st.markdown("### ❤️ For You")
 
-    "I don't need a perfect life. I just want beautiful moments with you. ❤️",
-
-    "You are one of the best things that has happened to me. 💖",
-
-    "If I had to choose again, I would still choose you. ❤️",
-
-    "You make ordinary moments feel special. ✨",
-
-    "You are my favourite person to annoy. 😂❤️",
-
-    "I still smile when I see your name on my phone. 🥰"
-]
+        st.success(message)
 
 
-if st.button("Give me a surprise ❤️"):
-
-    st.success(random.choice(love_messages))
-
-
-# ===================================================
+# ==================================================
 # FINAL LOVE LETTER
-# ===================================================
+# ==================================================
 
-st.markdown(f"""
-<div class="love-card">
+st.markdown("## 💗 And Finally...")
 
-<div class="card-title">
-❤️ And Finally...
-</div>
+with st.container(border=True):
 
-<div class="love-text">
+    st.markdown(f"### {GIRLFRIEND_NAME}")
 
-{GIRLFRIEND_NAME}
+    st.write(
+        """
+I know I am not perfect.
 
-<br><br>
+I know I make mistakes.
 
-I may not always be perfect.
+And sometimes I may not always know the right words to say.
 
-<br>
+But please never doubt this.
+"""
+    )
 
-I may make mistakes.
+    st.markdown("## I love you. ❤️")
 
-<br>
-
-Sometimes I may not know the right words to say.
-
-<br><br>
-
-But one thing I want you to always remember is this:
-
-<br><br>
-
-<b>I love you. ❤️</b>
-
-<br><br>
-
+    st.write(
+        """
 I love your smile.
-
-<br>
 
 I love your presence.
 
-<br>
-
-I love the memories we create.
-
-<br>
+I love our memories.
 
 And I love the person you are.
 
-<br><br>
-
 Thank you for being a part of my life.
 
-<br><br>
+No matter how complicated life gets, I hope we always find
+our way back to each other. ❤️
 
-No matter how complicated life gets,
-I hope we always find our way back to each other. ❤️
+Forever grateful for you.
+"""
+    )
 
-<br><br>
-
-<b>Forever grateful for you.</b>
-
-<br><br>
-
-With all my love,
-
-<br><br>
-
-<b>{YOUR_NAME}</b>
-
-</div>
-
-</div>
-""", unsafe_allow_html=True)
+    st.markdown(f"### With all my love,")
+    st.markdown(f"## {YOUR_NAME} ❤️")
 
 
-# ===================================================
+# ==================================================
 # FOOTER
-# ===================================================
+# ==================================================
 
-st.markdown("""
-<div class="footer">
+st.divider()
 
-Made with ❤️, love, and a little bit of coding.
+st.markdown("### Made with ❤️ just for you")
 
-<br><br>
-
-❤️ Forever Yours ❤️
-
-</div>
-""", unsafe_allow_html=True)
+st.caption("💕 Forever Yours 💕")
