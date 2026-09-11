@@ -34,268 +34,279 @@ if "show_letter" not in st.session_state:
 # ROMANTIC DESIGN
 # ============================================================
 
-st.markdown("""
-<style>
+st.markdown(
+    """
+    <style>
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@500;600;700&display=swap');
-
-
-/* ============================================================
-   BACKGROUND
-============================================================ */
-
-.stApp {
-    background:
-        radial-gradient(
-            circle at 10% 10%,
-            rgba(255, 185, 210, 0.65),
-            transparent 32%
-        ),
-        radial-gradient(
-            circle at 90% 15%,
-            rgba(255, 210, 225, 0.70),
-            transparent 32%
-        ),
-        radial-gradient(
-            circle at 50% 100%,
-            rgba(255, 190, 215, 0.50),
-            transparent 40%
-        ),
-        linear-gradient(
-            135deg,
-            #fff9fa,
-            #ffeef3,
-            #fff8fa
-        );
-}
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@500;600;700&display=swap');
 
 
-/* ============================================================
-   HIDE STREAMLIT UI
-============================================================ */
+    /* ============================================================
+       BACKGROUND
+    ============================================================ */
 
-#MainMenu {
-    visibility: hidden;
-}
-
-header {
-    visibility: hidden;
-}
-
-footer {
-    visibility: hidden;
-}
-
-
-/* ============================================================
-   MAIN CONTAINER
-============================================================ */
-
-.block-container {
-    max-width: 820px;
-    padding-top: 2rem;
-    padding-bottom: 4rem;
-}
-
-
-/* ============================================================
-   PARAGRAPHS
-============================================================ */
-
-[data-testid="stMarkdownContainer"] p {
-    font-family: 'Cormorant Garamond', serif !important;
-    color: #452631 !important;
-    font-size: 23px !important;
-    line-height: 1.5 !important;
-    margin-bottom: 14px !important;
-}
+    .stApp {
+        background:
+            radial-gradient(
+                circle at 10% 10%,
+                rgba(255, 185, 210, 0.65),
+                transparent 32%
+            ),
+            radial-gradient(
+                circle at 90% 15%,
+                rgba(255, 210, 225, 0.70),
+                transparent 32%
+            ),
+            radial-gradient(
+                circle at 50% 100%,
+                rgba(255, 190, 215, 0.50),
+                transparent 40%
+            ),
+            linear-gradient(
+                135deg,
+                #fff9fa,
+                #ffeef3,
+                #fff8fa
+            );
+    }
 
 
-/* ============================================================
-   HEADINGS
-============================================================ */
+    /* ============================================================
+       HIDE STREAMLIT UI
+    ============================================================ */
 
-h1 {
-    font-family: 'Great Vibes', cursive !important;
-    color: #c2185b !important;
-    text-align: center !important;
-    font-size: 68px !important;
-    margin-bottom: 8px !important;
-}
+    #MainMenu {
+        visibility: hidden;
+    }
 
+    header {
+        visibility: hidden;
+    }
 
-h2 {
-    font-family: 'Playfair Display', serif !important;
-    color: #c2185b !important;
-    text-align: center !important;
-    margin-top: 22px !important;
-    margin-bottom: 16px !important;
-}
+    footer {
+        visibility: hidden;
+    }
 
 
-h3 {
-    font-family: 'Playfair Display', serif !important;
-    color: #c2185b !important;
-    text-align: center !important;
-    margin-top: 28px !important;
-    margin-bottom: 14px !important;
-}
+    /* ============================================================
+       MAIN CONTAINER
+    ============================================================ */
+
+    .block-container {
+        max-width: 820px;
+        padding-top: 2rem;
+        padding-bottom: 4rem;
+    }
 
 
-/* ============================================================
-   LOVE LETTER CARD
-============================================================ */
+    /* ============================================================
+       PARAGRAPHS
+    ============================================================ */
 
-[data-testid="stVerticalBlockBorderWrapper"] {
-    background:
-        linear-gradient(
-            135deg,
-            rgba(255, 255, 255, 0.97),
-            rgba(255, 247, 250, 0.95)
-        ) !important;
-
-    border-radius: 28px !important;
-
-    border: 1px solid rgba(194, 24, 91, 0.18) !important;
-
-    box-shadow:
-        0px 15px 45px rgba(194, 24, 91, 0.12) !important;
-
-    padding: 16px !important;
-}
+    [data-testid="stMarkdownContainer"] p {
+        font-family: 'Cormorant Garamond', serif !important;
+        color: #452631 !important;
+        font-size: 23px !important;
+        line-height: 1.5 !important;
+        margin-bottom: 14px !important;
+    }
 
 
-/* ============================================================
-   BUTTONS
-============================================================ */
+    /* ============================================================
+       HEADINGS
+    ============================================================ */
 
-.stButton {
-    display: flex !important;
-    justify-content: center !important;
-}
+    h1 {
+        font-family: 'Great Vibes', cursive !important;
+        color: #c2185b !important;
+        text-align: center !important;
+        font-size: 68px !important;
+        margin-bottom: 8px !important;
+    }
+
+    h2 {
+        font-family: 'Playfair Display', serif !important;
+        color: #c2185b !important;
+        text-align: center !important;
+        margin-top: 22px !important;
+        margin-bottom: 16px !important;
+    }
+
+    h3 {
+        font-family: 'Playfair Display', serif !important;
+        color: #c2185b !important;
+        text-align: center !important;
+        margin-top: 28px !important;
+        margin-bottom: 14px !important;
+    }
 
 
-.stButton > button {
-    min-height: 58px !important;
-    border: none !important;
-    border-radius: 50px !important;
+    /* ============================================================
+       LOVE LETTER CARD
+    ============================================================ */
 
-    background:
-        linear-gradient(
+    [data-testid="stVerticalBlockBorderWrapper"] {
+        background:
+            linear-gradient(
+                135deg,
+                rgba(255, 255, 255, 0.97),
+                rgba(255, 247, 250, 0.95)
+            ) !important;
+
+        border-radius: 28px !important;
+
+        border: 1px solid rgba(194, 24, 91, 0.18) !important;
+
+        box-shadow:
+            0px 15px 45px rgba(194, 24, 91, 0.12) !important;
+
+        padding: 16px !important;
+    }
+
+
+    /* ============================================================
+       CENTER BUTTON
+    ============================================================ */
+
+    [data-testid="stButton"] {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+        margin-top: 10px !important;
+    }
+
+    [data-testid="stButton"] > button {
+        min-height: 58px !important;
+        min-width: 250px !important;
+
+        border: none !important;
+        border-radius: 50px !important;
+
+        background: linear-gradient(
             135deg,
             #f45a91,
             #c2185b
         ) !important;
 
-    color: white !important;
+        color: white !important;
 
-    font-family: 'Playfair Display', serif !important;
-    font-size: 19px !important;
-    font-weight: 600 !important;
+        font-family: 'Playfair Display', serif !important;
+        font-size: 19px !important;
+        font-weight: 600 !important;
 
-    padding-left: 34px !important;
-    padding-right: 34px !important;
+        padding: 0 34px !important;
 
-    box-shadow:
-        0px 10px 25px rgba(194, 24, 91, 0.25) !important;
-}
+        box-shadow:
+            0px 10px 25px rgba(194, 24, 91, 0.25) !important;
 
-
-/* ============================================================
-   CAPTION
-============================================================ */
-
-[data-testid="stCaptionContainer"] {
-    text-align: center !important;
-    color: #8a5363 !important;
-}
-
-
-/* ============================================================
-   FINAL LOVE MESSAGE
-============================================================ */
-
-.final-love-message {
-    font-family: 'Great Vibes', cursive !important;
-    font-size: 82px !important;
-    color: #c2185b !important;
-    text-align: center !important;
-    line-height: 1.15 !important;
-    margin-top: 55px !important;
-    margin-bottom: 10px !important;
-    padding: 10px !important;
-}
-
-
-.final-love-subtext {
-    font-family: 'Cormorant Garamond', serif !important;
-    font-size: 30px !important;
-    font-style: italic !important;
-    color: #8a5363 !important;
-    text-align: center !important;
-    margin-bottom: 28px !important;
-}
-
-
-.final-signature {
-    font-family: 'Great Vibes', cursive !important;
-    font-size: 42px !important;
-    color: #c2185b !important;
-    text-align: center !important;
-    line-height: 1.25 !important;
-    margin-bottom: 30px !important;
-}
-
-
-/* ============================================================
-   MOBILE
-============================================================ */
-
-@media (max-width: 600px) {
-
-    .block-container {
-        padding-left: 16px !important;
-        padding-right: 16px !important;
-        padding-top: 1.2rem !important;
+        transition: all 0.25s ease !important;
     }
 
-    h1 {
-        font-size: 52px !important;
+    [data-testid="stButton"] > button:hover {
+        transform: translateY(-2px) scale(1.03) !important;
+
+        box-shadow:
+            0px 14px 30px rgba(194, 24, 91, 0.35) !important;
     }
 
-    h2 {
-        font-size: 26px !important;
+
+    /* ============================================================
+       CAPTION
+    ============================================================ */
+
+    [data-testid="stCaptionContainer"] {
+        text-align: center !important;
+        color: #8a5363 !important;
     }
 
-    h3 {
-        font-size: 22px !important;
-    }
 
-    [data-testid="stMarkdownContainer"] p {
-        font-size: 21px !important;
-        line-height: 1.5 !important;
-    }
-
-    .stButton > button {
-        font-size: 17px !important;
-    }
+    /* ============================================================
+       FINAL LOVE MESSAGE
+    ============================================================ */
 
     .final-love-message {
-        font-size: 58px !important;
-        margin-top: 40px !important;
+        font-family: 'Great Vibes', cursive !important;
+        font-size: 82px !important;
+        color: #c2185b !important;
+        text-align: center !important;
+        line-height: 1.15 !important;
+        margin-top: 55px !important;
+        margin-bottom: 10px !important;
+        padding: 10px !important;
     }
 
     .final-love-subtext {
-        font-size: 25px !important;
+        font-family: 'Cormorant Garamond', serif !important;
+        font-size: 30px !important;
+        font-style: italic !important;
+        color: #8a5363 !important;
+        text-align: center !important;
+        margin-bottom: 28px !important;
     }
 
     .final-signature {
-        font-size: 36px !important;
+        font-family: 'Great Vibes', cursive !important;
+        font-size: 42px !important;
+        color: #c2185b !important;
+        text-align: center !important;
+        line-height: 1.25 !important;
+        margin-bottom: 30px !important;
     }
-}
 
-</style>
-""", unsafe_allow_html=True)
+
+    /* ============================================================
+       MOBILE
+    ============================================================ */
+
+    @media (max-width: 600px) {
+
+        .block-container {
+            padding-left: 16px !important;
+            padding-right: 16px !important;
+            padding-top: 1.2rem !important;
+        }
+
+        h1 {
+            font-size: 52px !important;
+        }
+
+        h2 {
+            font-size: 26px !important;
+        }
+
+        h3 {
+            font-size: 22px !important;
+        }
+
+        [data-testid="stMarkdownContainer"] p {
+            font-size: 21px !important;
+            line-height: 1.5 !important;
+        }
+
+        [data-testid="stButton"] > button {
+            min-width: 230px !important;
+            font-size: 17px !important;
+        }
+
+        .final-love-message {
+            font-size: 58px !important;
+            margin-top: 40px !important;
+        }
+
+        .final-love-subtext {
+            font-size: 25px !important;
+        }
+
+        .final-signature {
+            font-size: 36px !important;
+        }
+    }
+
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 
 # ============================================================
@@ -319,9 +330,7 @@ if not st.session_state.show_letter:
 
     st.markdown("### Something I wanted to say properly...")
 
-    st.markdown(
-        "### Something that comes directly from my heart. ❤️"
-    )
+    st.markdown("### Something that comes directly from my heart. ❤️")
 
     st.write("")
 
@@ -329,6 +338,7 @@ if not st.session_state.show_letter:
 
     st.write("")
 
+    # CENTER-ALIGNED BUTTON
     if st.button(
         "💌 Tap Here, Baby... ❤️",
         key="welcome_button"
@@ -360,7 +370,6 @@ else:
 
         st.markdown("## 💌 My Baby, Read This Slowly")
 
-
         st.markdown("""
 Baby,
 
@@ -373,7 +382,6 @@ Bas jaise mere dil mein hai, waise hi. ❤️
 
 
         st.markdown("### ❤️ Ninii Baby, I Love You So Much")
-
 
         st.markdown("""
 Shreya, I don't think you truly understand how important you have become to me.
@@ -391,7 +399,6 @@ I genuinely love having you in my life. ❤️
 
 
         st.markdown("### 🥺 Baby, I Miss You")
-
 
         st.markdown("""
 I miss you so much, Shreya.
@@ -416,7 +423,6 @@ Bas aap aur main. ❤️
 
         st.markdown("### 💕 I Want You In My Future")
 
-
         st.markdown("""
 Baby, I don't just want you for today. I don't just want beautiful conversations and beautiful memories.
 
@@ -440,7 +446,6 @@ Again and again. ❤️
 
         st.markdown("### 🏡 When I Think About My Life...")
 
-
         st.markdown("""
 When I think about my future, Shreya, I don't only think about my career, money or success.
 
@@ -457,7 +462,6 @@ Aur honestly, Baby... jab main us person ke baare mein sochta hoon, I want it to
 
 
         st.markdown("### ❤️ I Want To Build A Life With You")
-
 
         st.markdown("""
 I dream about having our own little world, Baby.
@@ -479,7 +483,6 @@ Aur aap mere saath.
 
 
         st.markdown("### 👨‍👩‍👧‍👦 I Want A Family With You")
-
 
         st.markdown("""
 This is one of the deepest things in my heart, Baby.
@@ -510,7 +513,6 @@ Aap us picture mein hote ho.
 
         st.markdown("### 🤍 Baby, I Know I Am Not Perfect")
 
-
         st.markdown("""
 I know I am not perfect, Shreya.
 
@@ -535,7 +537,6 @@ Aur main genuinely aapke saath kuch beautiful build karna chahta hoon. ❤️
 
 
         st.markdown("### ❤️ Ek Baat Main Dil Se Kehna Chahta Hoon...")
-
 
         st.markdown("""
 Baby, main jaanta hoon ki humare beech fights hongi. Disagreements honge.
@@ -570,7 +571,6 @@ Gusse ke baad bhi ek dusre ka haath nahi chhodna zaroori hai.
 
         st.markdown("### 🤝 Difficult Doesn't Mean The End")
 
-
         st.markdown("""
 Because Baby, I don't want us to give up on each other just because we are having a difficult moment.
 
@@ -599,7 +599,6 @@ I want us to find our way back to each other.
 
 
         st.markdown("### ❤️ I See Myself With You Till My Last Breath")
-
 
         st.markdown("""
 Because Shreya, main aapko sirf aaj ke liye nahi dekh raha.
@@ -643,32 +642,30 @@ Whenever we disagree, please don't think that I want to leave you.
         # ============================================================
 
         st.markdown(
-            '''
+            """
             <div class="final-love-message">
                 I Love You, Baby ❤️
             </div>
-            ''',
+            """,
             unsafe_allow_html=True
         )
 
-
         st.markdown(
-            '''
+            """
             <div class="final-love-subtext">
                 With all my heart. ❤️
             </div>
-            ''',
+            """,
             unsafe_allow_html=True
         )
 
-
         st.markdown(
-            f'''
+            f"""
             <div class="final-signature">
                 Forever yours,<br>
                 {YOUR_NAME} ❤️
             </div>
-            ''',
+            """,
             unsafe_allow_html=True
         )
 
