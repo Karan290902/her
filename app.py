@@ -161,8 +161,8 @@ st.markdown(hearts_html, unsafe_allow_html=True)
 # EDIT THESE ❤️
 # ---------------------------------------------------
 
-GIRLFRIEND_NAME = "My Love ❤️"
-YOUR_NAME = "Karan"
+GIRLFRIEND_NAME = "My Bubuu 
+YOUR_NAME = "Karan❤️"
 
 REASONS = [
     "❤️ Your smile makes even my worst days better.",
@@ -224,7 +224,7 @@ st.markdown(
 
 st.markdown("### ❤️ Click the button if you want to know something")
 
-if st.button("How much do you love me? ❤️"):
+if st.button("How much i love you? ❤️"):
     st.balloons()
 
     st.markdown(
