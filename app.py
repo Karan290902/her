@@ -14,7 +14,8 @@ st.set_page_config(
 
 
 # ============================================================
-# PERSONAL DETAILS - CUSTOMIZE HERE ❤️
+# PERSONAL DETAILS ❤️
+# CHANGE THESE IF YOU WANT
 # ============================================================
 
 GIRLFRIEND_NAME = "Shreya"
@@ -82,7 +83,7 @@ footer {
 
 
 /* ============================================================
-   PARAGRAPHS
+   GENERAL TEXT
 ============================================================ */
 
 [data-testid="stMarkdownContainer"] p {
@@ -128,19 +129,17 @@ h3 {
 ============================================================ */
 
 [data-testid="stVerticalBlockBorderWrapper"] {
-    background:
-        linear-gradient(
-            135deg,
-            rgba(255, 255, 255, 0.96),
-            rgba(255, 247, 250, 0.94)
-        );
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.97),
+        rgba(255, 247, 250, 0.96)
+    );
 
     border-radius: 30px !important;
 
     border: 1px solid rgba(214, 51, 108, 0.20) !important;
 
-    box-shadow:
-        0px 15px 45px rgba(190, 50, 95, 0.14) !important;
+    box-shadow: 0px 15px 45px rgba(190, 50, 95, 0.14) !important;
 
     padding: 18px !important;
 }
@@ -155,28 +154,21 @@ h3 {
     border: none !important;
     border-radius: 50px !important;
 
-    background:
-        linear-gradient(
-            135deg,
-            #e83e78,
-            #c2185b
-        ) !important;
+    background: linear-gradient(
+        135deg,
+        #e83e78,
+        #c2185b
+    ) !important;
 
     color: white !important;
 
     font-family: 'Playfair Display', serif !important;
-    font-size: 20px !important;
+    font-size: 19px !important;
 
     padding: 14px 25px !important;
 
     box-shadow:
         0px 8px 20px rgba(194, 24, 91, 0.25) !important;
-
-    transition: 0.3s !important;
-}
-
-.stButton > button:hover {
-    transform: scale(1.02);
 }
 
 
@@ -191,12 +183,91 @@ h3 {
 
 
 /* ============================================================
-   DIVIDER
+   WELCOME SCREEN
 ============================================================ */
 
-hr {
-    margin-top: 25px !important;
-    margin-bottom: 25px !important;
+.welcome-box {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: center !important;
+    padding-top: 20px;
+}
+
+.welcome-heart {
+    font-size: 65px;
+    text-align: center;
+    margin-bottom: 20px;
+    animation: heartbeat 2s infinite ease-in-out;
+}
+
+.welcome-title {
+    font-family: 'Great Vibes', cursive;
+    color: #c2185b;
+    font-size: 70px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.welcome-subtitle {
+    font-family: 'Playfair Display', serif;
+    color: #c2185b;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.welcome-message {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto 20px auto;
+    text-align: center !important;
+}
+
+.welcome-message p {
+    font-family: 'Cormorant Garamond', serif !important;
+    color: #4b2632 !important;
+    font-size: 25px !important;
+    line-height: 1.5 !important;
+    text-align: center !important;
+    margin: 10px 0 !important;
+}
+
+.welcome-emojis {
+    text-align: center;
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    animation: heartbeat 2s infinite ease-in-out;
+}
+
+
+/* ============================================================
+   HEARTBEAT ANIMATION
+============================================================ */
+
+@keyframes heartbeat {
+
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.10);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    75% {
+        transform: scale(1.10);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 
@@ -206,11 +277,11 @@ hr {
 
 .floating-heart {
     position: fixed;
-    bottom: -50px;
+    bottom: -60px;
     z-index: 0;
     pointer-events: none;
     animation: floatUp linear infinite;
-    opacity: 0.7;
+    opacity: 0.65;
 }
 
 .heart1 {
@@ -256,17 +327,40 @@ hr {
     }
 
     10% {
-        opacity: 0.75;
+        opacity: 0.7;
     }
 
     90% {
-        opacity: 0.75;
+        opacity: 0.7;
     }
 
     100% {
         transform: translateY(-110vh) rotate(360deg);
         opacity: 0;
     }
+}
+
+
+/* ============================================================
+   POPUP FIX - MAKE EVERYTHING CLEARLY VISIBLE
+============================================================ */
+
+div[role="dialog"] {
+    background-color: #fff8fa !important;
+}
+
+div[role="dialog"] p {
+    color: #3f202b !important;
+}
+
+div[role="dialog"] h1,
+div[role="dialog"] h2,
+div[role="dialog"] h3 {
+    color: #c2185b !important;
+}
+
+div[role="dialog"] strong {
+    color: #c2185b !important;
 }
 
 
@@ -300,8 +394,20 @@ hr {
         margin-bottom: 13px !important;
     }
 
-    .floating-heart {
-        opacity: 0.5;
+    .welcome-heart {
+        font-size: 55px;
+    }
+
+    .welcome-title {
+        font-size: 52px;
+    }
+
+    .welcome-subtitle {
+        font-size: 24px;
+    }
+
+    .welcome-message p {
+        font-size: 22px !important;
     }
 }
 
@@ -310,15 +416,15 @@ hr {
 
 <div class="floating-heart heart1">❤️</div>
 <div class="floating-heart heart2">💕</div>
-<div class="floating-heart heart3">❤️</div>
+<div class="floating-heart heart3">💖</div>
 <div class="floating-heart heart4">💗</div>
-<div class="floating-heart heart5">💖</div>
+<div class="floating-heart heart5">❤️</div>
 
 """, unsafe_allow_html=True)
 
 
 # ============================================================
-# POPUP FUNCTION
+# POPUP
 # ============================================================
 
 @st.dialog("💌 A Little Something For You...")
@@ -326,28 +432,73 @@ def open_love_popup():
 
     st.markdown(
         f"""
-        ## My {NICKNAME} ❤️
+<div style="
+    background: #fff8fa;
+    color: #3f202b;
+    padding: 10px 15px 20px 15px;
+    border-radius: 15px;
+">
 
-        Before you open this...
+<h2 style="
+    color: #c2185b;
+    text-align: center;
+    font-family: Georgia, serif;
+">
+My {NICKNAME} ❤️
+</h2>
 
-        I just want you to know that this is not something copied from somewhere.
+<p style="color: #3f202b;">
+Before you open this...
+</p>
 
-        **Yeh maine tumhare liye, apne dil se likha hai. ❤️**
+<p style="color: #3f202b;">
+I just want you to know that this is not something copied from somewhere.
+</p>
 
-        Maybe I don't always say everything perfectly when we talk.
+<p style="
+    color: #c2185b;
+    font-weight: bold;
+">
+Yeh maine tumhare liye, apne dil se likha hai. ❤️
+</p>
 
-        Maybe kabhi kabhi main apni feelings properly express nahi kar pata.
+<p style="color: #3f202b;">
+Maybe I don't always say everything perfectly when we talk.
+</p>
 
-        But everything inside this letter is something I genuinely feel for you, Baby.
+<p style="color: #3f202b;">
+Maybe kabhi kabhi main apni feelings properly express nahi kar pata.
+</p>
 
-        So take a deep breath...
+<p style="color: #3f202b;">
+But everything inside this letter is something I genuinely feel for you, Baby.
+</p>
 
-        Read it slowly...
+<p style="color: #3f202b;">
+So take a deep breath...
+</p>
 
-        Aur bas itna yaad rakhna...
+<p style="color: #3f202b;">
+Read it slowly...
+</p>
 
-        **Tum mere liye bahut special ho, Shreya. ❤️**
-        """
+<p style="color: #3f202b;">
+Aur bas itna yaad rakhna...
+</p>
+
+<p style="
+    color: #c2185b;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 25px;
+">
+Tum mere liye bahut special ho, {GIRLFRIEND_NAME}. ❤️
+</p>
+
+</div>
+        """,
+        unsafe_allow_html=True
     )
 
     if st.button("❤️ Open My Heart, Baby ❤️"):
@@ -361,26 +512,40 @@ def open_love_popup():
 
 if not st.session_state.show_letter:
 
-    st.markdown("# ❤️")
-
-    st.markdown(f"# Hey, {GIRLFRIEND_NAME}...")
-
     st.markdown(
         f"""
-        ### My {NICKNAME} ❤️
+<div class="welcome-box">
 
-        I have something for you.
+    <div class="welcome-heart">❤️</div>
 
-        Something I wanted to say properly...
+    <div class="welcome-title">
+        Hey, {GIRLFRIEND_NAME}...
+    </div>
 
-        Something that comes directly from my heart.
-        """
+    <div class="welcome-subtitle">
+        My {NICKNAME} ❤️
+    </div>
+
+    <div class="welcome-message">
+        <p>I have something for you.</p>
+        <p>Something I wanted to say properly...</p>
+        <p>Something that comes directly from my heart. ❤️</p>
+    </div>
+
+    <div class="welcome-emojis">
+        ❤️ &nbsp; 💕 &nbsp; 💖 &nbsp; 💗 &nbsp; ❤️
+    </div>
+
+</div>
+        """,
+        unsafe_allow_html=True
     )
 
-    st.markdown("💌 ❤️ 💕 ❤️ 💌")
+    col1, col2, col3 = st.columns([1, 2.5, 1])
 
-    if st.button("💌 Tap Here, Baby..."):
-        open_love_popup()
+    with col2:
+        if st.button("💌 Tap Here, Baby... ❤️"):
+            open_love_popup()
 
 
 # ============================================================
@@ -390,8 +555,7 @@ if not st.session_state.show_letter:
 else:
 
     st.markdown("# ❤️")
-
-    st.markdown(f"# My Ninii Baby, {GIRLFRIEND_NAME} ❤️")
+    st.markdown(f"# My {NICKNAME}, {GIRLFRIEND_NAME} ❤️")
 
     st.caption("A little piece of my heart, written only for you, Baby ❤️")
 
@@ -400,31 +564,25 @@ else:
 
     with st.container(border=True):
 
-        # ====================================================
-        # INTRO
-        # ====================================================
-
         st.markdown("## 💌 My Baby, Read This Slowly")
 
-        st.markdown(f"""
+        st.markdown("""
 Baby,
 
-I honestly don't know how to explain everything that is in my heart. There are so many things I want to tell you, {GIRLFRIEND_NAME}, and sometimes I feel like words are just not enough.
+I honestly don't know how to explain everything that is in my heart. There are so many things I want to tell you, and sometimes I feel like words are just not enough.
 
-But today I just want to write everything that I feel. Not in a perfect way, not with perfect words...
+But today I just want to write everything that I feel.
+
+Not in a perfect way, not with perfect words...
 
 Bas jaise mere dil mein hai, waise hi. ❤️
 """)
 
 
-        # ====================================================
-        # LOVE
-        # ====================================================
-
         st.markdown("### ❤️ Ninii Baby, I Love You So Much")
 
-        st.markdown(f"""
-{GIRLFRIEND_NAME}, I don't think you truly understand how important you have become to me. You are not just someone I love, Baby.
+        st.markdown("""
+Shreya, I don't think you truly understand how important you have become to me. You are not just someone I love, Baby.
 
 You have become a part of my life, a part of my thoughts, a part of my happiness and a part of my everyday life.
 
@@ -437,10 +595,6 @@ Aur honestly, Baby... mujhe tumhara meri life mein hona bahut pasand hai.
 I love having you in my life. ❤️
 """)
 
-
-        # ====================================================
-        # MISSING HER
-        # ====================================================
 
         st.markdown("### 🥺 Baby, I Miss You")
 
@@ -455,25 +609,15 @@ Aur kabhi kabhi, Ninii Baby, baat karne ke baad bhi tumhari yaad aati hai.
 
 Because when someone becomes this important to your heart, their absence is something you feel.
 
-Aur Baby...
+Aur Baby, main tumhari kami feel karta hoon.
 
-Main tumhari kami feel karta hoon.
-
-There are moments when I just wish you were here.
-
-Kaash tum mere paas hoti.
-
-I wish I could sit with you, talk to you, laugh with you and hold you.
+There are moments when I just wish you were here. Kaash tum mere paas hoti.
 
 Nothing complicated.
 
 Bas tum aur main. ❤️
 """)
 
-
-        # ====================================================
-        # FUTURE
-        # ====================================================
 
         st.markdown("### 💕 Shreya, I Want You In My Future")
 
@@ -488,65 +632,39 @@ I want you in my future.
 
 I want to make more memories with you, laugh with you, have silly arguments with you and then make up again.
 
-I want to see you happy and be there when you need someone.
-
 I want us to grow together and understand each other more as time passes.
 
 Aur Baby, life chahe kitni bhi difficult ho, main chahta hoon ki hum ek dusre ka saath na chhode.
 
-Because, Ninii Baby...
-
-You are someone I genuinely want to choose.
+Because, Ninii Baby... you are someone I genuinely want to choose.
 
 Again and again. ❤️
 """)
 
 
-        # ====================================================
-        # HOME
-        # ====================================================
-
-        st.markdown("### 🏡 When I Think About My Life, Baby...")
+        st.markdown("### 🏡 When I Think About My Life...")
 
         st.markdown("""
 When I think about my future, Shreya, I don't only think about my career, money or success.
 
-Of course those things are important, but they are not everything.
-
 Jab main apni life imagine karta hoon, main imagine karta hoon ki mere paas koi ho.
 
-Someone I can come home to.
-
-Someone I can tell about my day.
-
-Someone I can celebrate with when life is good.
-
-And someone I can hold onto when life becomes difficult.
+Someone I can come home to, someone I can tell about my day, someone I can celebrate with when life is good and someone I can hold onto when life becomes difficult.
 
 Someone who feels like home.
 
 Aur honestly, Baby...
 
-Jab main us person ke baare mein sochta hoon...
-
-I want it to be you. ❤️
+Jab main us person ke baare mein sochta hoon, I want it to be you. ❤️
 """)
 
-
-        # ====================================================
-        # LIFE TOGETHER
-        # ====================================================
 
         st.markdown("### ❤️ Ninii Baby, I Want To Build A Life With You")
 
         st.markdown("""
 I dream about having our own little world, Baby.
 
-Our own home.
-
-Our own memories.
-
-Our own small routines.
+Our own home. Our own memories. Our own small routines.
 
 Waking up together, coming back home after a long day, eating together and laughing about silly things.
 
@@ -556,21 +674,11 @@ Aur kabhi kabhi argue karke phir ek dusre ko mana lena. ❤️
 
 Mujhe koi perfect life nahi chahiye, Baby.
 
-I just want a real life.
-
-With real problems.
-
-Real happiness.
-
-Real memories.
+I just want a real life, with real problems, real happiness and real memories.
 
 Aur tum mere saath.
 """)
 
-
-        # ====================================================
-        # FAMILY
-        # ====================================================
 
         st.markdown("### 👨‍👩‍👧‍👦 Shreya, I Want A Family With You")
 
@@ -579,13 +687,7 @@ This is one of the deepest things in my heart, Baby.
 
 One day, I want to build a family with you.
 
-Humara apna chhota sa family.
-
-Our own home filled with love and laughter.
-
-Our own memories.
-
-Our own traditions.
+Humara apna chhota sa family. Our own home filled with love and laughter, our own memories and our own traditions.
 
 I want us to grow older together.
 
@@ -607,22 +709,14 @@ Tum us picture mein hoti ho.
 """)
 
 
-        # ====================================================
-        # NOT PERFECT
-        # ====================================================
-
         st.markdown("### 🤍 Baby, I Know I Am Not Perfect")
 
         st.markdown("""
 I know I am not perfect, Shreya.
 
-Main mistakes karta hoon.
+Main mistakes karta hoon. Kabhi kabhi main galat bol deta hoon.
 
-Kabhi kabhi main galat bol deta hoon.
-
-Sometimes I don't understand things immediately.
-
-Aur kabhi kabhi main apni feelings properly express nahi kar pata.
+Sometimes I don't understand things immediately, aur kabhi kabhi main apni feelings properly express nahi kar pata.
 
 Shayad kabhi kabhi main tumhe properly dikha bhi nahi pata ki tum mere liye kitni important ho.
 
@@ -640,24 +734,16 @@ Aur main genuinely tumhare saath kuch beautiful build karna chahta hoon. ❤️
 """)
 
 
-        # ====================================================
-        # FIGHTS
-        # ====================================================
-
         st.markdown("### ❤️ Baby, Ek Baat Main Dil Se Kehna Chahta Hoon...")
 
         st.markdown("""
-Baby, main jaanta hoon ki humare beech fights hongi.
-
-Disagreements honge.
+Baby, main jaanta hoon ki humare beech fights hongi. Disagreements honge.
 
 Kabhi kabhi hum ek dusre se naraz honge.
 
 Kabhi tum mujhe samajh nahi paogi, aur kabhi main tumhe samajhne mein galti karunga.
 
 Kabhi hum dono gusse mein kuch aisa bol denge jo humein nahi bolna chahiye tha.
-
-Aur sach bolu, Baby... shayad kabhi kabhi aisa lagega ki hum dono ek dusre ke against khade hain.
 
 But I want you to remember something.
 
@@ -667,7 +753,9 @@ A disagreement does not mean that our relationship is doomed.
 
 Narazgi ka matlab yeh nahi hai ki hum ek dusre ko khona chahte hain.
 
-Hum dono perfect nahi hain, Baby. Aur shayad humara relationship bhi kabhi perfect nahi hoga.
+Hum dono perfect nahi hain, Baby.
+
+Aur shayad humara relationship bhi kabhi perfect nahi hoga.
 
 But perfect hona zaroori bhi nahi hai.
 
@@ -678,10 +766,6 @@ Ek dusre ko samajhne ki koshish karna zaroori hai.
 Gusse ke baad bhi ek dusre ka haath nahi chhodna zaroori hai.
 """)
 
-
-        # ====================================================
-        # US VS THE PROBLEM
-        # ====================================================
 
         st.markdown("### 🤝 Ninii Baby, Difficult Doesn't Mean The End")
 
@@ -694,17 +778,13 @@ Ek fight doesn't mean our relationship is broken.
 
 Ek disagreement doesn't mean that our love has failed.
 
-Main nahi chahta ki har fight ke baad hum sochein...
-
-"Maybe this is the end."
+Main nahi chahta ki har fight ke baad hum sochein, "Maybe this is the end."
 
 Instead, I want us to think...
 
 **Hum dono milke isse solve karenge.**
 
-Because for me, Baby...
-
-It should never be you versus me.
+Because for me, Baby, it should never be you versus me.
 
 **It should always be you and me versus the problem. ❤️**
 
@@ -714,38 +794,24 @@ I want us to talk.
 
 I want us to listen.
 
-I want us to calm down.
-
 Aur phir chahe kitna bhi gussa ho...
 
 I want us to find our way back to each other.
 """)
 
 
-        # ====================================================
-        # FOREVER
-        # ====================================================
-
         st.markdown("### ❤️ Shreya, I See Myself With You Till My Last Breath")
 
         st.markdown("""
 Because Shreya, main tumhe sirf aaj ke liye nahi dekh raha.
 
-When I think about my life ahead...
+When I think about my life ahead, I see you.
 
-I see you.
+When I think about growing older, I see you.
 
-When I think about growing older...
+When I think about having a home, I see you.
 
-I see you.
-
-When I think about having a home...
-
-I see you.
-
-When I think about having a family...
-
-I see you.
+When I think about having a family, I see you.
 
 And honestly, Baby...
 
@@ -772,10 +838,6 @@ Whenever we disagree, please don't think that I want to leave you.
 **Difficult doesn't mean impossible. ❤️**
 """)
 
-
-        # ====================================================
-        # FINAL MESSAGE
-        # ====================================================
 
         st.markdown("## ❤️ Shreya, I Love You")
 
@@ -832,9 +894,7 @@ No matter how difficult things become...
 
 Main chahta hoon ki hum dono har phase se saath guzrein.
 
-Aaj.
-
-Kal.
+Aaj. Kal.
 
 Aur jitna bhi time humein zindagi saath de.
 
@@ -859,10 +919,6 @@ Forever yours,
 ## {YOUR_NAME} ❤️
 """)
 
-
-    # ============================================================
-    # FOOTER
-    # ============================================================
 
     st.divider()
 
