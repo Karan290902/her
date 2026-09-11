@@ -327,11 +327,11 @@ Shreya, I don't think you truly understand how important you have become to me.
 
 You are not just someone I love, Baby. You have become a part of my life, a part of my thoughts, a part of my happiness and a part of my everyday life.
 
-Kabhi kabhi mere din mein kuch hota hai aur sabse pehle mujhe tumhe batane ka mann karta hai. Sometimes I see something funny and immediately think about sending it to you.
+Kabhi kabhi mere din mein kuch hota hai aur sabse pehle mujhe aapko batane ka mann karta hai. Sometimes I see something funny and immediately think about sending it to you.
 
 Sometimes I am doing absolutely nothing, and still somehow you are in my mind.
 
-Aur honestly, Baby... mujhe tumhara meri life mein hona bahut pasand hai.
+Aur honestly, Baby... mujhe aapki meri life mein hona bahut pasand hai.
 
 I genuinely love having you in my life. ❤️
 """)
@@ -343,21 +343,21 @@ I genuinely love having you in my life. ❤️
         st.markdown("""
 I miss you so much, Shreya.
 
-Kabhi kabhi mujhe khud nahi pata hota ki main tumhe itna kyun miss kar raha hoon. I miss talking to you, I miss hearing from you, I miss your presence and I miss our conversations.
+Kabhi kabhi mujhe khud nahi pata hota ki main aapko itna kyun miss kar raha hoon. I miss talking to you, I miss hearing from you, I miss your presence and I miss our conversations.
 
 I even miss those small moments that probably don't seem important to anyone else but mean so much to me.
 
-Aur kabhi kabhi, Ninii Baby, baat karne ke baad bhi tumhari yaad aati hai.
+Aur kabhi kabhi, Ninii Baby, baat karne ke baad bhi aapki yaad aati hai.
 
 Because when someone becomes this important to your heart, their absence is something you feel.
 
-Aur Baby, main tumhari kami feel karta hoon.
+Aur Baby, main aapki kami feel karta hoon.
 
-There are moments when I just wish you were here. Kaash tum mere paas hoti.
+There are moments when I just wish you were here. Kaash aap mere paas hote.
 
 Nothing complicated.
 
-Bas tum aur main. ❤️
+Bas aap aur main. ❤️
 """)
 
 
@@ -421,7 +421,7 @@ Mujhe koi perfect life nahi chahiye, Baby.
 
 I just want a real life, with real problems, real happiness and real memories.
 
-Aur tum mere saath.
+Aur aap mere saath.
 """)
 
 
@@ -451,7 +451,7 @@ We made it. ❤️
 
 Because when I imagine a family and a life that feels like mine...
 
-Tum us picture mein hoti ho.
+Aap us picture mein hote ho.
 """)
 
 
@@ -465,19 +465,19 @@ Main mistakes karta hoon. Kabhi kabhi main galat bol deta hoon.
 
 Sometimes I don't understand things immediately, aur kabhi kabhi main apni feelings properly express nahi kar pata.
 
-Shayad kabhi kabhi main tumhe properly dikha bhi nahi pata ki tum mere liye kitni important ho.
+Shayad kabhi kabhi main aapko properly dikha bhi nahi pata ki aap mere liye kitni important ho.
 
 But Baby, please never doubt this.
 
 **What I feel for you is real.**
 
-Main genuinely tumhari care karta hoon.
+Main genuinely aapki care karta hoon.
 
-Main genuinely tumhe miss karta hoon.
+Main genuinely aapko miss karta hoon.
 
-Main genuinely tumhe apni life mein chahta hoon.
+Main genuinely aapko apni life mein chahta hoon.
 
-Aur main genuinely tumhare saath kuch beautiful build karna chahta hoon. ❤️
+Aur main genuinely aapke saath kuch beautiful build karna chahta hoon. ❤️
 """)
 
 
@@ -489,7 +489,7 @@ Baby, main jaanta hoon ki humare beech fights hongi. Disagreements honge.
 
 Kabhi kabhi hum ek dusre se naraz honge.
 
-Kabhi tum mujhe samajh nahi paogi, aur kabhi main tumhe samajhne mein galti karunga.
+Kabhi aap mujhe samajh nahi paogi, aur kabhi main aapko samajhne mein galti karunga.
 
 Kabhi hum dono gusse mein kuch aisa bol denge jo humein nahi bolna chahiye tha.
 
@@ -549,7 +549,7 @@ I want us to find our way back to each other.
 
 
         st.markdown("""
-Because Shreya, main tumhe sirf aaj ke liye nahi dekh raha.
+Because Shreya, main aapko sirf aaj ke liye nahi dekh raha.
 
 When I think about my life ahead, I see you.
 
@@ -647,9 +647,9 @@ Kal.
 
 Aur jitna bhi time humein zindagi saath de.
 
-Because Baby, mere dil mein tumhare liye sirf aaj ka pyaar nahi hai.
+Because Baby, mere dil mein aapke liye sirf aaj ka pyaar nahi hai.
 
-Main tumhe apni zindagi ke har kal mein dekhna chahta hoon.
+Main aapko apni zindagi ke har kal mein dekhna chahta hoon.
 
 Till my last breath...
 
