@@ -382,57 +382,6 @@ Difficult doesn't mean impossible.
 """)
 
 
-    st.markdown("## ❤️ Shreya, I Love You")
-
-    st.markdown(f"""
-Baby, I don't know exactly what the future will look like. I don't know what challenges life will bring us.
-
-But I know one thing.
-
-I want you to be a part of my life.
-
-I want more than just memories with you. I want more than just conversations.
-
-I want a life with you.
-
-A home with you.
-
-A family with you.
-
-A future with you.
-
-I want to wake up one day and realise that all the things we once dreamed about are now our real life.
-
-You and me.
-
-Humara ghar.
-
-Humari family.
-
-Humari memories.
-
-Humari life.
-
-Aur Baby, I know I don't always say everything perfectly. But please remember this.
-
-**I love you.**
-
-So much more than I am able to explain.
-
-**I miss you.**
-
-More than you probably realise.
-
-Aur Ninii Baby, no matter how difficult things become... I don't want a life without you in it.
-
-Main chahta hoon ki hum dono har phase se saath guzrein. Aaj. Kal. Aur jitna bhi time humein zindagi saath de.
-
-Because Baby, mere dil mein aapke liye sirf aaj ka pyaar nahi hai.
-
-Main aapko apni zindagi ke har kal mein dekhna chahta hoon.
-
-Till my last breath...
-
 **I want it to be you, Shreya. ❤️**
 
 You.
