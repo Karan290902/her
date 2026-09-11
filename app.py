@@ -207,24 +207,24 @@ But today I just want to write everything that I feel. Not in a perfect way, not
     st.markdown("""
 Shreya, I don't think you truly understand how important you have become to me. You are not just someone I love, Baby. You have become a part of my life, a part of my thoughts, a part of my happiness and a part of my everyday life.
 
-Kabhi kabhi mere din mein kuch hota hai aur sabse pehle mujhe tumhe batane ka mann karta hai. Sometimes I see something funny and immediately think about sending it to you, my Ninii Baby. Sometimes I am doing absolutely nothing, and still somehow you are in my mind.
+Kabhi kabhi mere din mein kuch hota hai aur sabse pehle mujhe aapko batane ka mann karta hai. Sometimes I see something funny and immediately think about sending it to you, my Ninii Baby. Sometimes I am doing absolutely nothing, and still somehow you are in my mind.
 
-Aur honestly, Baby... mujhe tumhara meri life mein hona bahut pasand hai. I love having you in my life.
+Aur honestly, Baby... mujhe aapka meri life mein hona bahut pasand hai. I love having you in my life.
 """)
 
 
     st.markdown("### 🥺 Baby, I Miss You")
 
     st.markdown("""
-I miss you so much, Shreya. Kabhi kabhi mujhe khud nahi pata hota ki main tumhe itna kyun miss kar raha hoon. I miss talking to you, I miss hearing from you, I miss your presence and I miss our conversations.
+I miss you so much, Shreya. Kabhi kabhi mujhe khud nahi pata hota ki main aapko itna kyun miss kar raha hoon. I miss talking to you, I miss hearing from you, I miss your presence and I miss our conversations.
 
-I even miss those small moments that probably don't seem important to anyone else but mean so much to me. Aur kabhi kabhi, Ninii Baby, baat karne ke baad bhi tumhari yaad aati hai.
+I even miss those small moments that probably don't seem important to anyone else but mean so much to me. Aur kabhi kabhi, Ninii Baby, baat karne ke baad bhi aapki yaad aati hai.
 
-Because when someone becomes this important to your heart, their absence is something you feel. Aur Baby, main tumhari kami feel karta hoon.
+Because when someone becomes this important to your heart, their absence is something you feel. Aur Baby, main aapki kami feel karta hoon.
 
-There are moments when I just wish you were here. Kaash tum mere paas hoti. I wish I could sit with you, talk to you, laugh with you, hold you... aur bas tum mere paas hoti.
+There are moments when I just wish you were here. Kaash aap mere paas hoti. I wish I could sit with you, talk to you, laugh with you, hold you... aur bas aap mere paas hote.
 
-Nothing complicated. Bas tum aur main.
+Nothing complicated. Bas aap aur main.
 """)
 
 
@@ -263,7 +263,7 @@ Waking up together. Coming back home after a long day. Eating together. Laughing
 
 Mujhe koi perfect life nahi chahiye, Baby. I don't want some imaginary perfect life. I just want a real life, with real problems, real happiness and real memories.
 
-Aur tum mere saath.
+Aur aap mere saath.
 """)
 
 
@@ -278,7 +278,7 @@ Aur phir ek dusre ko dekh ke bolein... hum ruke nahi. Humne ek dusre ko choose k
 
 We made it.
 
-That thought genuinely makes me happy, Ninii Baby. Because when I imagine a family and a life that feels like mine... tum us picture mein hoti ho.
+That thought genuinely makes me happy, Ninii Baby. Because when I imagine a family and a life that feels like mine... aap us picture mein hoti ho.
 """)
 
 
@@ -287,22 +287,22 @@ That thought genuinely makes me happy, Ninii Baby. Because when I imagine a fami
     st.markdown("""
 I know I am not perfect, Shreya. Main mistakes karta hoon. Kabhi kabhi main galat bol deta hoon. Sometimes I don't understand things immediately, aur kabhi kabhi main apni feelings properly express nahi kar pata.
 
-Shayad kabhi kabhi main tumhe properly dikha bhi nahi pata ki tum mere liye kitni important ho.
+Shayad kabhi kabhi main aapko properly dikha bhi nahi pata ki aap mere liye kitni important ho.
 
 But Baby, please never doubt this.
 
 What I feel for you is real.
 
-Main genuinely tumhari care karta hoon. Main genuinely tumhe miss karta hoon. Main genuinely tumhe apni life mein chahta hoon.
+Main genuinely aapki care karta hoon. Main genuinely aapko miss karta hoon. Main genuinely aapko apni life mein chahta hoon.
 
-Aur main genuinely tumhare saath kuch beautiful build karna chahta hoon.
+Aur main genuinely aapke saath kuch beautiful build karna chahta hoon.
 """)
 
 
     st.markdown("### ❤️ Baby, Ek Baat Main Dil Se Kehna Chahta Hoon...")
 
     st.markdown("""
-Baby, main jaanta hoon ki humare beech fights hongi. Disagreements honge. Kabhi kabhi hum ek dusre se naraz honge. Kabhi tum mujhe samajh nahi paogi, aur kabhi main tumhe samajhne mein galti karunga.
+Baby, main jaanta hoon ki humare beech fights hongi. Disagreements honge. Kabhi kabhi hum ek dusre se naraz honge. Kabhi aap mujhe samajh nahi paogi, aur kabhi main aapko samajhne mein galti karunga.
 
 Kabhi hum dono gusse mein kuch aisa bol denge jo humein nahi bolna chahiye tha.
 
@@ -352,7 +352,7 @@ Aur phir chahe kitna bhi gussa ho... I want us to find our way back to each othe
     st.markdown("### ❤️ Shreya, I See Myself With You Till My Last Breath")
 
     st.markdown("""
-Because Shreya, main tumhe sirf aaj ke liye nahi dekh raha.
+Because Shreya, main aapko sirf aaj ke liye nahi dekh raha.
 
 When I think about my life ahead, I see you.
 
@@ -427,9 +427,9 @@ Aur Ninii Baby, no matter how difficult things become... I don't want a life wit
 
 Main chahta hoon ki hum dono har phase se saath guzrein. Aaj. Kal. Aur jitna bhi time humein zindagi saath de.
 
-Because Baby, mere dil mein tumhare liye sirf aaj ka pyaar nahi hai.
+Because Baby, mere dil mein aapke liye sirf aaj ka pyaar nahi hai.
 
-Main tumhe apni zindagi ke har kal mein dekhna chahta hoon.
+Main aapko apni zindagi ke har kal mein dekhna chahta hoon.
 
 Till my last breath...
 
