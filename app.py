@@ -581,7 +581,7 @@ def inject_css():
             animation: fadeIn 0.9s ease forwards;
             animation-delay: 0.40s;
         }
-        .chapter-content p { margin: 0 0 1rem 0; }
+        .chapter-content p { margin: 0 0 0.55rem 0; }
         .chapter-bottom-heart {
             text-align: center;
             margin-top: 1.4rem;
@@ -759,7 +759,8 @@ def inject_css():
             .welcome-msg { font-size: 1.1rem; }
             .story-card { padding: 1.8rem 1.3rem; border-radius: 24px; }
             .chapter-title { font-size: 2rem; }
-            .chapter-content { font-size: 1.1rem; }
+            .chapter-content { font-size: 1.1rem; line-height: 1.65; }
+            .chapter-content p { margin: 0 0 0.45rem 0; }
             .transition-text { font-size: 1.9rem; }
             .memory-title { font-size: 2.2rem; }
             .memory-card { padding: 1.8rem 1.3rem; }
