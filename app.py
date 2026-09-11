@@ -274,7 +274,7 @@ This is one of the deepest things in my heart, Baby. One day, I want to build a 
 
 I want us to grow older together. Aur ek din jab hum peeche mudke dekhein, toh hum un saare moments ko yaad karein—the beautiful moments, the difficult moments, the times we laughed, the times we cried and the times we had to be strong.
 
-Aur phir ek dusre ko dekh ke bolein... hum ruk gaye nahi. Humne ek dusre ko choose kiya. Humne saath nibhaya.
+Aur phir ek dusre ko dekh ke bolein... hum ruke nahi. Humne ek dusre ko choose kiya. Humne saath nibhaya.
 
 We made it.
 
