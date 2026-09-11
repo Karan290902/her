@@ -26,561 +26,107 @@ NICKNAME = "Ninii Baby"
 # SESSION STATE
 # ============================================================
 
-if "show_letter" not in st.session_state:
-    st.session_state.show_letter = False
+if "show_story" not in st.session_state:
+    st.session_state.show_story = False
+
+if "current_slide" not in st.session_state:
+    st.session_state.current_slide = 0
 
 
 # ============================================================
-# ROMANTIC DESIGN
+# STORY CONTENT
 # ============================================================
 
-st.markdown(
-    """
-    <style>
-
-    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@500;600;700&display=swap');
-
-
-    /* ============================================================
-       BACKGROUND
-    ============================================================ */
-
-    .stApp {
-        background:
-            radial-gradient(
-                circle at 10% 10%,
-                rgba(255, 185, 210, 0.65),
-                transparent 32%
-            ),
-            radial-gradient(
-                circle at 90% 15%,
-                rgba(255, 210, 225, 0.70),
-                transparent 32%
-            ),
-            radial-gradient(
-                circle at 50% 100%,
-                rgba(255, 190, 215, 0.50),
-                transparent 40%
-            ),
-            linear-gradient(
-                135deg,
-                #fff9fa,
-                #ffeef3,
-                #fff8fa
-            );
-    }
-
-
-    /* ============================================================
-       HIDE STREAMLIT UI
-    ============================================================ */
-
-    #MainMenu {
-        visibility: hidden;
-    }
-
-    header {
-        visibility: hidden;
-    }
-
-    footer {
-        visibility: hidden;
-    }
-
-
-    /* ============================================================
-       MAIN CONTAINER
-    ============================================================ */
-
-    .block-container {
-        max-width: 820px;
-        padding-top: 2rem;
-        padding-bottom: 4rem;
-    }
-
-
-    /* ============================================================
-       PARAGRAPHS
-    ============================================================ */
-
-    [data-testid="stMarkdownContainer"] p {
-        font-family: 'Cormorant Garamond', serif !important;
-        color: #452631 !important;
-        font-size: 23px !important;
-        line-height: 1.5 !important;
-        margin-bottom: 14px !important;
-    }
-
-
-    /* ============================================================
-       HEADINGS
-    ============================================================ */
-
-    h1 {
-        font-family: 'Great Vibes', cursive !important;
-        color: #c2185b !important;
-        text-align: center !important;
-        font-size: 68px !important;
-        margin-bottom: 8px !important;
-    }
-
-    h2 {
-        font-family: 'Playfair Display', serif !important;
-        color: #c2185b !important;
-        text-align: center !important;
-        margin-top: 22px !important;
-        margin-bottom: 16px !important;
-    }
-
-    h3 {
-        font-family: 'Playfair Display', serif !important;
-        color: #c2185b !important;
-        text-align: center !important;
-        margin-top: 28px !important;
-        margin-bottom: 14px !important;
-    }
-
-
-    /* ============================================================
-       LOVE LETTER CARD
-    ============================================================ */
-
-    [data-testid="stVerticalBlockBorderWrapper"] {
-        background:
-            linear-gradient(
-                135deg,
-                rgba(255, 255, 255, 0.97),
-                rgba(255, 247, 250, 0.95)
-            ) !important;
-
-        border-radius: 28px !important;
-
-        border: 1px solid rgba(194, 24, 91, 0.18) !important;
-
-        box-shadow:
-            0px 15px 45px rgba(194, 24, 91, 0.12) !important;
-
-        padding: 16px !important;
-    }
-
-
-    /* ============================================================
-       CENTER BUTTON
-    ============================================================ */
-
-    [data-testid="stButton"] {
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        width: 100% !important;
-        margin-top: 10px !important;
-    }
-
-    [data-testid="stButton"] > button {
-        min-height: 58px !important;
-        min-width: 250px !important;
-
-        border: none !important;
-        border-radius: 50px !important;
-
-        background: linear-gradient(
-            135deg,
-            #f45a91,
-            #c2185b
-        ) !important;
-
-        color: white !important;
-
-        font-family: 'Playfair Display', serif !important;
-        font-size: 19px !important;
-        font-weight: 600 !important;
-
-        padding: 0 34px !important;
-
-        box-shadow:
-            0px 10px 25px rgba(194, 24, 91, 0.25) !important;
-
-        transition: all 0.25s ease !important;
-    }
-
-    [data-testid="stButton"] > button:hover {
-        transform: translateY(-2px) scale(1.03) !important;
-
-        box-shadow:
-            0px 14px 30px rgba(194, 24, 91, 0.35) !important;
-    }
-
-
-    /* ============================================================
-       CAPTION
-    ============================================================ */
-
-    [data-testid="stCaptionContainer"] {
-        text-align: center !important;
-        color: #8a5363 !important;
-    }
-
-
-    /* ============================================================
-       OUR STORY TIMELINE
-    ============================================================ */
-
-    .timeline-title {
-        font-family: 'Great Vibes', cursive !important;
-        color: #c2185b !important;
-        text-align: center !important;
-        font-size: 62px !important;
-        margin-top: 55px !important;
-        margin-bottom: 8px !important;
-    }
-
-    .timeline-subtitle {
-        font-family: 'Cormorant Garamond', serif !important;
-        color: #8a5363 !important;
-        text-align: center !important;
-        font-size: 25px !important;
-        font-style: italic !important;
-        margin-bottom: 35px !important;
-    }
-
-    .timeline {
-        position: relative;
-        max-width: 680px;
-        margin: 0 auto;
-        padding: 10px 0 25px 0;
-    }
-
-    .timeline::before {
-        content: "";
-        position: absolute;
-        width: 3px;
-        background: linear-gradient(
-            to bottom,
-            #f7a0bd,
-            #c2185b,
-            #f7a0bd
-        );
-        top: 0;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        border-radius: 10px;
-    }
-
-    .timeline-item {
-        position: relative;
-        width: 50%;
-        padding: 10px 35px;
-        box-sizing: border-box;
-    }
-
-    .timeline-item.left {
-        left: 0;
-        text-align: right;
-    }
-
-    .timeline-item.right {
-        left: 50%;
-        text-align: left;
-    }
-
-    .timeline-dot {
-        position: absolute;
-        width: 18px;
-        height: 18px;
-        background: #c2185b;
-        border: 4px solid #ffeef3;
-        border-radius: 50%;
-        top: 28px;
-        box-shadow: 0 4px 12px rgba(194, 24, 91, 0.35);
-    }
-
-    .timeline-item.left .timeline-dot {
-        right: -13px;
-    }
-
-    .timeline-item.right .timeline-dot {
-        left: -13px;
-    }
-
-    .timeline-card {
-        background: rgba(255, 255, 255, 0.94);
-        border: 1px solid rgba(194, 24, 91, 0.18);
-        border-radius: 18px;
-        padding: 18px 20px;
-        box-shadow: 0 8px 22px rgba(194, 24, 91, 0.10);
-        transition: transform 0.25s ease;
-    }
-
-    .timeline-card:hover {
-        transform: translateY(-3px);
-    }
-
-    .timeline-date {
-        font-family: 'Playfair Display', serif !important;
-        color: #c2185b !important;
-        font-size: 18px !important;
-        font-weight: 700 !important;
-        margin-bottom: 6px !important;
-    }
-
-    .timeline-event {
-        font-family: 'Cormorant Garamond', serif !important;
-        color: #452631 !important;
-        font-size: 23px !important;
-        font-weight: 700 !important;
-        line-height: 1.25 !important;
-    }
-
-    .timeline-memory {
-        font-family: 'Cormorant Garamond', serif !important;
-        color: #8a5363 !important;
-        font-size: 19px !important;
-        line-height: 1.35 !important;
-        margin-top: 7px !important;
-    }
-
-
-    /* ============================================================
-       FINAL LOVE MESSAGE
-    ============================================================ */
-
-    .final-love-message {
-        font-family: 'Great Vibes', cursive !important;
-        font-size: 82px !important;
-        color: #c2185b !important;
-        text-align: center !important;
-        line-height: 1.15 !important;
-        margin-top: 55px !important;
-        margin-bottom: 10px !important;
-        padding: 10px !important;
-    }
-
-    .final-love-subtext {
-        font-family: 'Cormorant Garamond', serif !important;
-        font-size: 30px !important;
-        font-style: italic !important;
-        color: #8a5363 !important;
-        text-align: center !important;
-        margin-bottom: 28px !important;
-    }
-
-    .final-signature {
-        font-family: 'Great Vibes', cursive !important;
-        font-size: 42px !important;
-        color: #c2185b !important;
-        text-align: center !important;
-        line-height: 1.25 !important;
-        margin-bottom: 30px !important;
-    }
-
-
-    /* ============================================================
-       MOBILE
-    ============================================================ */
-
-    @media (max-width: 700px) {
-
-        .block-container {
-            padding-left: 16px !important;
-            padding-right: 16px !important;
-            padding-top: 1.2rem !important;
-        }
-
-        h1 {
-            font-size: 52px !important;
-        }
-
-        h2 {
-            font-size: 26px !important;
-        }
-
-        h3 {
-            font-size: 22px !important;
-        }
-
-        [data-testid="stMarkdownContainer"] p {
-            font-size: 21px !important;
-            line-height: 1.5 !important;
-        }
-
-        [data-testid="stButton"] > button {
-            min-width: 230px !important;
-            font-size: 17px !important;
-        }
-
-        .timeline-title {
-            font-size: 48px !important;
-        }
-
-        .timeline-subtitle {
-            font-size: 22px !important;
-        }
-
-        .timeline::before {
-            left: 22px;
-        }
-
-        .timeline-item {
-            width: 100%;
-            padding-left: 52px;
-            padding-right: 0;
-            padding-bottom: 14px;
-            left: 0 !important;
-            text-align: left !important;
-        }
-
-        .timeline-item.left .timeline-dot,
-        .timeline-item.right .timeline-dot {
-            left: 9px;
-            right: auto;
-        }
-
-        .timeline-event {
-            font-size: 21px !important;
-        }
-
-        .timeline-memory {
-            font-size: 18px !important;
-        }
-
-        .final-love-message {
-            font-size: 58px !important;
-            margin-top: 40px !important;
-        }
-
-        .final-love-subtext {
-            font-size: 25px !important;
-        }
-
-        .final-signature {
-            font-size: 36px !important;
-        }
-    }
-
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
-
-# ============================================================
-# WELCOME PAGE
-# ============================================================
-
-if not st.session_state.show_letter:
-
-    st.write("")
-    st.write("")
-
-    st.markdown("# ❤️")
-
-    st.markdown(f"# Hey, {GIRLFRIEND_NAME}...")
-
-    st.markdown(f"## My {NICKNAME} ❤️")
-
-    st.write("")
-
-    st.markdown("### I have something for you.")
-
-    st.markdown("### Something I wanted to say properly...")
-
-    st.markdown(
-        "### Something that comes directly from my heart. ❤️"
-    )
-
-    st.write("")
-
-    st.markdown("## ❤️ 💕 💗 💖 ❤️")
-
-    st.write("")
-
-    if st.button(
-        "💌 Tap Here, Baby... ❤️",
-        key="welcome_button"
-    ):
-        st.session_state.show_letter = True
-        st.rerun()
-
-
-# ============================================================
-# LOVE LETTER
-# ============================================================
-
-else:
-
-    st.markdown("# ❤️")
-
-    st.markdown(
-        f"# My {NICKNAME}, {GIRLFRIEND_NAME} ❤️"
-    )
-
-    st.caption(
-        "A little piece of my heart, written only for you, Baby ❤️"
-    )
-
-    st.divider()
-
-
-    with st.container(border=True):
-
-        st.markdown("## 💌 My Baby, Read This Slowly")
-
-        st.markdown("""
+slides = [
+
+    {
+        "title": "💌 My Baby, Read This Slowly",
+        "content": """
 Baby,
 
-I honestly don't know how to explain everything that is in my heart. There are so many things I want to tell you, and sometimes I feel like words are just not enough.
+I honestly don't know how to explain everything that is in my heart.
 
-But today I just want to write everything that I feel. Not in a perfect way, not with perfect words.
+There are so many things I want to tell you, and sometimes I feel like words are just not enough.
+
+But today I just want to write everything that I feel.
+
+Not in a perfect way.
+
+Not with perfect words.
 
 Bas jaise mere dil mein hai, waise hi. ❤️
-""")
+"""
+    },
 
 
-        st.markdown("### ❤️ Ninii Baby, I Love You So Much")
-
-        st.markdown("""
+    {
+        "title": "❤️ Ninii Baby, I Love You So Much",
+        "content": """
 Shreya, I don't think you truly understand how important you have become to me.
 
-You are not just someone I love, Baby. You have become a part of my life, a part of my thoughts, a part of my happiness and a part of my everyday life.
+You are not just someone I love, Baby.
 
-Kabhi kabhi mere din mein kuch hota hai aur sabse pehle mujhe aapko batane ka mann karta hai. Sometimes I see something funny and immediately think about sending it to you.
+You have become a part of my life, a part of my thoughts, a part of my happiness and a part of my everyday life.
+
+Kabhi kabhi mere din mein kuch hota hai aur sabse pehle mujhe aapko batane ka mann karta hai.
+
+Sometimes I see something funny and immediately think about sending it to you.
 
 Sometimes I am doing absolutely nothing, and still somehow you are in my mind.
 
-Aur honestly, Baby... mujhe aapka meri life mein hona bahut pasand hai.
+Aur honestly, Baby...
+
+Mujhe aapka meri life mein hona bahut pasand hai.
 
 I genuinely love having you in my life. ❤️
-""")
+"""
+    },
 
 
-        st.markdown("### 🥺 Baby, I Miss You")
-
-        st.markdown("""
+    {
+        "title": "🥺 Baby, I Miss You",
+        "content": """
 I miss you so much, Shreya.
 
-Kabhi kabhi mujhe khud nahi pata hota ki main aapko itna kyun miss kar raha hoon. I miss talking to you, I miss hearing from you, I miss your presence and I miss our conversations.
+Kabhi kabhi mujhe khud nahi pata hota ki main aapko itna kyun miss kar raha hoon.
+
+I miss talking to you.
+
+I miss hearing from you.
+
+I miss your presence.
+
+I miss our conversations.
 
 I even miss those small moments that probably don't seem important to anyone else but mean so much to me.
 
-Aur kabhi kabhi, Ninii Baby, baat karne ke baad bhi aapki yaad aati hai.
+Aur kabhi kabhi, Ninii Baby...
+
+Baat karne ke baad bhi aapki yaad aati hai.
 
 Because when someone becomes this important to your heart, their absence is something you feel.
 
-Aur Baby, main aapki kami feel karta hoon.
+Aur Baby...
 
-There are moments when I just wish you were here. Kaash aap mere paas hote.
+Main aapki kami feel karta hoon.
+
+There are moments when I just wish you were here.
+
+Kaash aap mere paas hote.
 
 Nothing complicated.
 
 Bas aap aur main. ❤️
-""")
+"""
+    },
 
 
-        st.markdown("### 💕 I Want You In My Future")
+    {
+        "title": "💕 I Want You In My Future",
+        "content": """
+Baby, I don't just want you for today.
 
-        st.markdown("""
-Baby, I don't just want you for today. I don't just want beautiful conversations and beautiful memories.
+I don't just want beautiful conversations and beautiful memories.
 
 Main nahi chahta ki hum sirf ek temporary chapter bane ek dusre ki life mein.
 
@@ -588,43 +134,75 @@ I want you in my life.
 
 I want you in my future.
 
-I want to make more memories with you, laugh with you, have silly arguments with you and then make up again.
+I want to make more memories with you.
+
+Laugh with you.
+
+Have silly arguments with you.
+
+And then make up again.
 
 I want us to grow together and understand each other more as time passes.
 
-Aur Baby, life chahe kitni bhi difficult ho, main chahta hoon ki hum ek dusre ka saath na chhode.
+Aur Baby...
 
-Because, Ninii Baby... you are someone I genuinely want to choose.
+Life chahe kitni bhi difficult ho, main chahta hoon ki hum ek dusre ka saath na chhode.
+
+Because, Ninii Baby...
+
+You are someone I genuinely want to choose.
 
 Again and again. ❤️
-""")
+"""
+    },
 
 
-        st.markdown("### 🏡 When I Think About My Life...")
-
-        st.markdown("""
+    {
+        "title": "🏡 When I Think About My Life...",
+        "content": """
 When I think about my future, Shreya, I don't only think about my career, money or success.
 
-Jab main apni life imagine karta hoon, main imagine karta hoon ki mere paas koi ho.
+Jab main apni life imagine karta hoon...
 
-Someone I can come home to. Someone I can tell about my day.
+Main imagine karta hoon ki mere paas koi ho.
 
-Someone I can celebrate with when life is good and someone I can hold onto when life becomes difficult.
+Someone I can come home to.
+
+Someone I can tell about my day.
+
+Someone I can celebrate with when life is good.
+
+And someone I can hold onto when life becomes difficult.
 
 Someone who feels like home.
 
-Aur honestly, Baby... jab main us person ke baare mein sochta hoon, I want it to be you. ❤️
-""")
+Aur honestly, Baby...
+
+Jab main us person ke baare mein sochta hoon...
+
+I want it to be you. ❤️
+"""
+    },
 
 
-        st.markdown("### ❤️ I Want To Build A Life With You")
-
-        st.markdown("""
+    {
+        "title": "❤️ I Want To Build A Life With You",
+        "content": """
 I dream about having our own little world, Baby.
 
-Our own home. Our own memories. Our own small routines.
+Our own home.
 
-Waking up together. Coming back home after a long day. Eating together. Laughing about silly things.
+Our own memories.
+
+Our own small routines.
+
+Waking up together.
+
+Coming back home after a long day.
+
+Eating together.
+
+Laughing about silly things.
 
 Annoying each other.
 
@@ -632,24 +210,49 @@ Aur kabhi kabhi argue karke phir ek dusre ko mana lena. ❤️
 
 Mujhe koi perfect life nahi chahiye, Baby.
 
-I just want a real life, with real problems, real happiness and real memories.
+I just want a real life.
 
-Aur aap mere saath.
-""")
+With real problems.
+
+Real happiness.
+
+Real memories.
+
+Aur aap mere saath. ❤️
+"""
+    },
 
 
-        st.markdown("### 👨‍👩‍👧‍👦 I Want A Family With You")
-
-        st.markdown("""
+    {
+        "title": "👨‍👩‍👧‍👦 I Want A Family With You",
+        "content": """
 This is one of the deepest things in my heart, Baby.
 
 One day, I want to build a family with you.
 
-Humara apna chhota sa family. Our own home filled with love and laughter. Our own memories and our own traditions.
+Humara apna chhota sa family.
+
+Our own home filled with love and laughter.
+
+Our own memories.
+
+Our own traditions.
 
 I want us to grow older together.
 
-Aur ek din jab hum peeche mudke dekhein, toh hum un saare moments ko yaad karein—the beautiful moments, the difficult moments, the times we laughed, the times we cried and the times we had to be strong.
+Aur ek din jab hum peeche mudke dekhein...
+
+Toh hum un saare moments ko yaad karein.
+
+The beautiful moments.
+
+The difficult moments.
+
+The times we laughed.
+
+The times we cried.
+
+And the times we had to be strong.
 
 Aur phir ek dusre ko dekh ke bolein...
 
@@ -664,23 +267,30 @@ We made it. ❤️
 Because when I imagine a family and a life that feels like mine...
 
 Aap us picture mein hote ho.
-""")
+"""
+    },
 
 
-        st.markdown("### 🤍 Baby, I Know I Am Not Perfect")
-
-        st.markdown("""
+    {
+        "title": "🤍 Baby, I Know I Am Not Perfect",
+        "content": """
 I know I am not perfect, Shreya.
 
-Main mistakes karta hoon. Kabhi kabhi main galat bol deta hoon.
+Main mistakes karta hoon.
 
-Sometimes I don't understand things immediately, aur kabhi kabhi main apni feelings properly express nahi kar pata.
+Kabhi kabhi main galat bol deta hoon.
+
+Sometimes I don't understand things immediately.
+
+Aur kabhi kabhi main apni feelings properly express nahi kar pata.
 
 Shayad kabhi kabhi main aapko properly dikha bhi nahi pata ki aap mere liye kitni important ho.
 
-But Baby, please never doubt this.
+But Baby...
 
-**What I feel for you is real.**
+Please never doubt this.
+
+What I feel for you is real.
 
 Main genuinely aapki care karta hoon.
 
@@ -689,23 +299,26 @@ Main genuinely aapko miss karta hoon.
 Main genuinely aapko apni life mein chahta hoon.
 
 Aur main genuinely aapke saath kuch beautiful build karna chahta hoon. ❤️
-""")
+"""
+    },
 
 
-        st.markdown("### ❤️ Ek Baat Main Dil Se Kehna Chahta Hoon...")
+    {
+        "title": "❤️ Ek Baat Main Dil Se Kehna Chahta Hoon...",
+        "content": """
+Baby, main jaanta hoon ki humare beech fights hongi.
 
-        st.markdown("""
-Baby, main jaanta hoon ki humare beech fights hongi. Disagreements honge.
+Disagreements honge.
 
 Kabhi kabhi hum ek dusre se naraz honge.
 
-Kabhi aap mujhe samajh nahi paogi, aur kabhi main aapko samajhne mein galti karunga.
+Kabhi aap mujhe samajh nahi paogi.
 
-Kabhi hum dono gusse mein kuch aisa bol denge jo humein nahi bolna chahiye tha.
+Aur kabhi main aapko samajhne mein galti karunga.
 
 But I want you to remember something.
 
-**A fight between us does not mean that our love is over.**
+A fight between us does not mean that our love is over.
 
 A disagreement does not mean that our relationship is doomed.
 
@@ -717,17 +330,18 @@ Aur shayad humara relationship bhi kabhi perfect nahi hoga.
 
 But perfect hona zaroori bhi nahi hai.
 
-**Saath rehna zaroori hai. ❤️**
+Saath rehna zaroori hai. ❤️
 
 Ek dusre ko samajhne ki koshish karna zaroori hai.
 
 Gusse ke baad bhi ek dusre ka haath nahi chhodna zaroori hai.
-""")
+"""
+    },
 
 
-        st.markdown("### 🤝 Difficult Doesn't Mean The End")
-
-        st.markdown("""
+    {
+        "title": "🤝 Difficult Doesn't Mean The End",
+        "content": """
 Because Baby, I don't want us to give up on each other just because we are having a difficult moment.
 
 Ek difficult day doesn't mean we have a difficult life.
@@ -736,40 +350,57 @@ Ek fight doesn't mean our relationship is broken.
 
 Ek disagreement doesn't mean that our love has failed.
 
-Main nahi chahta ki har fight ke baad hum sochein, "Maybe this is the end."
+Main nahi chahta ki har fight ke baad hum sochein...
+
+Maybe this is the end.
 
 Instead, I want us to think...
 
-**Hum dono milke isse solve karenge.**
+Hum dono milke isse solve karenge.
 
-Because for me, Baby, it should never be you versus me.
+Because for me, Baby...
 
-**It should always be you and me versus the problem. ❤️**
+It should never be you versus me.
 
-I want us to talk. I want us to listen. I want us to calm down.
+It should always be you and me versus the problem. ❤️
+
+I want us to talk.
+
+I want us to listen.
+
+I want us to calm down.
 
 Aur phir chahe kitna bhi gussa ho...
 
 I want us to find our way back to each other.
-""")
+"""
+    },
 
 
-        st.markdown("### ❤️ I See Myself With You Till My Last Breath")
-
-        st.markdown("""
+    {
+        "title": "❤️ I See Myself With You Till My Last Breath",
+        "content": """
 Because Shreya, main aapko sirf aaj ke liye nahi dekh raha.
 
-When I think about my life ahead, I see you.
+When I think about my life ahead...
 
-When I think about growing older, I see you.
+I see you.
 
-When I think about having a home, I see you.
+When I think about growing older...
 
-When I think about having a family, I see you.
+I see you.
+
+When I think about having a home...
+
+I see you.
+
+When I think about having a family...
+
+I see you.
 
 And honestly, Baby...
 
-**I see myself with you till my last breath. ❤️**
+I see myself with you till my last breath. ❤️
 
 Maybe life will not always go according to our plans.
 
@@ -785,59 +416,1051 @@ Again and again.
 
 And again.
 
-Ninii Baby, whenever we fight, please don't think that I stopped loving you.
+Ninii Baby...
+
+Whenever we fight, please don't think that I stopped loving you.
 
 Whenever we disagree, please don't think that I want to leave you.
 
-**Difficult doesn't mean impossible. ❤️**
-""")
+Difficult doesn't mean impossible. ❤️
+"""
+    }
+
+]
 
 
-    
+# ============================================================
+# CSS DESIGN
+# ============================================================
 
-        # ============================================================
-        # FINAL LOVE MESSAGE ❤️
-        # ============================================================
+st.markdown(
+    """
+<style>
 
-        st.markdown(
-            """
-            <div class="final-love-message">
-                I Love You, Baby ❤️
-            </div>
-            """,
-            unsafe_allow_html=True
-        )
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@500;600;700&display=swap');
 
-        st.markdown(
-            """
-            <div class="final-love-subtext">
-                With all my heart. ❤️
-            </div>
-            """,
-            unsafe_allow_html=True
-        )
+
+/* ============================================================
+   BACKGROUND
+============================================================ */
+
+.stApp {
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(255, 185, 210, 0.65),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 90% 15%,
+            rgba(255, 210, 225, 0.70),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(255, 190, 215, 0.50),
+            transparent 40%
+        ),
+        linear-gradient(
+            135deg,
+            #fff9fa,
+            #ffeef3,
+            #fff8fa
+        );
+}
+
+
+/* ============================================================
+   HIDE STREAMLIT UI
+============================================================ */
+
+#MainMenu {
+    visibility: hidden;
+}
+
+header {
+    visibility: hidden;
+}
+
+footer {
+    visibility: hidden;
+}
+
+
+/* ============================================================
+   MAIN CONTAINER
+============================================================ */
+
+.block-container {
+    max-width: 850px;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+
+/* ============================================================
+   HEADINGS
+============================================================ */
+
+h1 {
+    font-family: 'Great Vibes', cursive !important;
+    color: #c2185b !important;
+    text-align: center !important;
+    font-size: 68px !important;
+}
+
+
+h2 {
+    font-family: 'Playfair Display', serif !important;
+    color: #c2185b !important;
+    text-align: center !important;
+}
+
+
+/* ============================================================
+   CENTER BUTTONS
+============================================================ */
+
+[data-testid="stButton"] {
+
+    display: flex !important;
+
+    justify-content: center !important;
+
+    width: 100% !important;
+}
+
+
+[data-testid="stButton"] > button {
+
+    min-height: 54px !important;
+
+    min-width: 190px !important;
+
+    border: none !important;
+
+    border-radius: 50px !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f45a91,
+            #c2185b
+        ) !important;
+
+    color: white !important;
+
+    font-family:
+        'Playfair Display',
+        serif !important;
+
+    font-size: 17px !important;
+
+    font-weight: 600 !important;
+
+    padding:
+        0 28px !important;
+
+    box-shadow:
+        0 10px 25px
+        rgba(194,24,91,0.22) !important;
+
+    transition:
+        all 0.25s ease !important;
+}
+
+
+[data-testid="stButton"] > button:hover {
+
+    transform:
+        translateY(-2px)
+        scale(1.03) !important;
+}
+
+
+/* ============================================================
+   STORY CARD
+============================================================ */
+
+.story-card {
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.97),
+            rgba(255,244,248,0.97)
+        );
+
+    border:
+        1px solid
+        rgba(194,24,91,0.15);
+
+    border-radius: 32px;
+
+    padding:
+        42px 48px;
+
+    box-shadow:
+        0 18px 50px
+        rgba(194,24,91,0.13);
+
+    animation:
+        fadePop
+        0.7s ease;
+
+}
+
+
+/* ============================================================
+   ANIMATION
+============================================================ */
+
+@keyframes fadePop {
+
+    0% {
+        opacity: 0;
+        transform:
+            translateY(25px)
+            scale(0.97);
+    }
+
+    100% {
+        opacity: 1;
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+/* ============================================================
+   STORY TITLE
+============================================================ */
+
+.story-title {
+
+    font-family:
+        'Playfair Display',
+        serif;
+
+    font-size: 32px;
+
+    font-weight: 600;
+
+    color: #c2185b;
+
+    text-align: center;
+
+    margin-bottom:
+        28px;
+
+}
+
+
+/* ============================================================
+   STORY TEXT
+============================================================ */
+
+.story-text {
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 25px;
+
+    line-height: 1.55;
+
+    color: #452631;
+
+    text-align: center;
+
+    white-space:
+        pre-line;
+
+}
+
+
+/* ============================================================
+   PROGRESS
+============================================================ */
+
+.progress-text {
+
+    text-align:
+        center;
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size:
+        19px;
+
+    color:
+        #8a5363;
+
+    margin-bottom:
+        12px;
+
+}
+
+
+.progress-dots {
+
+    text-align:
+        center;
+
+    font-size:
+        18px;
+
+    letter-spacing:
+        5px;
+
+    color:
+        #e9a2ba;
+
+    margin-bottom:
+        22px;
+
+}
+
+
+/* ============================================================
+   TIMELINE
+============================================================ */
+
+.timeline-title {
+
+    font-family:
+        'Great Vibes',
+        cursive;
+
+    font-size:
+        62px;
+
+    color:
+        #c2185b;
+
+    text-align:
+        center;
+
+    margin-bottom:
+        8px;
+
+}
+
+
+.timeline-subtitle {
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size:
+        24px;
+
+    font-style:
+        italic;
+
+    color:
+        #8a5363;
+
+    text-align:
+        center;
+
+    margin-bottom:
+        35px;
+
+}
+
+
+.love-timeline {
+
+    width:
+        100%;
+
+    max-width:
+        680px;
+
+    margin:
+        auto;
+
+}
+
+
+.memory-card {
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.97),
+            rgba(255,241,247,0.97)
+        );
+
+    border-radius:
+        25px;
+
+    padding:
+        28px
+        30px;
+
+    text-align:
+        center;
+
+    border:
+        1px solid
+        rgba(194,24,91,0.16);
+
+    box-shadow:
+        0 12px 30px
+        rgba(194,24,91,0.10);
+
+    animation:
+        fadePop
+        0.7s ease;
+
+}
+
+
+.memory-date {
+
+    display:
+        inline-block;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f45a91,
+            #c2185b
+        );
+
+    color:
+        white;
+
+    padding:
+        7px
+        20px;
+
+    border-radius:
+        30px;
+
+    font-family:
+        'Playfair Display',
+        serif;
+
+    margin-bottom:
+        16px;
+
+}
+
+
+.memory-icon {
+
+    font-size:
+        40px;
+
+}
+
+
+.memory-event {
+
+    font-family:
+        'Playfair Display',
+        serif;
+
+    font-size:
+        27px;
+
+    color:
+        #c2185b;
+
+    margin:
+        8px
+        0
+        12px;
+
+}
+
+
+.memory-text {
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size:
+        22px;
+
+    line-height:
+        1.45;
+
+    color:
+        #542f3d;
+
+}
+
+
+.memory-connector {
+
+    font-size:
+        28px;
+
+    color:
+        #d94d82;
+
+    text-align:
+        center;
+
+    padding:
+        12px;
+
+}
+
+
+/* ============================================================
+   FINAL MESSAGE
+============================================================ */
+
+.final-love-message {
+
+    font-family:
+        'Great Vibes',
+        cursive;
+
+    font-size:
+        82px;
+
+    color:
+        #c2185b;
+
+    text-align:
+        center;
+
+    line-height:
+        1.2;
+
+    animation:
+        fadePop
+        1s ease;
+
+}
+
+
+.final-love-subtext {
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size:
+        30px;
+
+    font-style:
+        italic;
+
+    color:
+        #8a5363;
+
+    text-align:
+        center;
+
+}
+
+
+.final-signature {
+
+    font-family:
+        'Great Vibes',
+        cursive;
+
+    font-size:
+        45px;
+
+    color:
+        #c2185b;
+
+    text-align:
+        center;
+
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 600px) {
+
+    .block-container {
+
+        padding-left:
+            15px !important;
+
+        padding-right:
+            15px !important;
+    }
+
+
+    h1 {
+
+        font-size:
+            52px !important;
+    }
+
+
+    .story-card {
+
+        padding:
+            30px
+            22px;
+    }
+
+
+    .story-title {
+
+        font-size:
+            26px;
+    }
+
+
+    .story-text {
+
+        font-size:
+            22px;
+    }
+
+
+    .timeline-title {
+
+        font-size:
+            50px;
+    }
+
+
+    .timeline-subtitle {
+
+        font-size:
+            21px;
+    }
+
+
+    .memory-event {
+
+        font-size:
+            23px;
+    }
+
+
+    .memory-text {
+
+        font-size:
+            20px;
+    }
+
+
+    .final-love-message {
+
+        font-size:
+            58px;
+    }
+
+}
+
+</style>
+""",
+    unsafe_allow_html=True
+)
+
+
+# ============================================================
+# WELCOME PAGE
+# ============================================================
+
+if not st.session_state.show_story:
+
+    st.write("")
+    st.write("")
+
+    st.markdown("# ❤️")
+
+    st.markdown(f"# Hey, {GIRLFRIEND_NAME}...")
+
+    st.markdown(f"## My {NICKNAME} ❤️")
+
+    st.write("")
+
+    st.markdown(
+        """
+        <div class="timeline-subtitle">
+        I have something for you...
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+    st.markdown(
+        """
+        <div class="timeline-subtitle">
+        Something I wanted to say properly...
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+    st.markdown(
+        """
+        <div class="timeline-subtitle">
+        Something that comes directly from my heart. ❤️
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+    st.write("")
+
+    if st.button(
+        "💌 Start Reading, Baby... ❤️",
+        key="start_button"
+    ):
+        st.session_state.show_story = True
+        st.session_state.current_slide = 0
+        st.rerun()
+
+
+# ============================================================
+# STORY EXPERIENCE
+# ============================================================
+
+else:
+
+    TOTAL_STORY_SLIDES = len(slides) + 2
+
+    current = st.session_state.current_slide
+
+
+    # ========================================================
+    # LETTER SLIDES
+    # ========================================================
+
+    if current < len(slides):
+
+        slide = slides[current]
 
         st.markdown(
             f"""
-            <div class="final-signature">
-                Forever yours,<br>
-                {YOUR_NAME} ❤️
+            <div class="progress-text">
+                Chapter {current + 1} of {TOTAL_STORY_SLIDES}
             </div>
             """,
             unsafe_allow_html=True
         )
 
 
-# ============================================================
-# FOOTER
-# ============================================================
+        # Progress dots
 
-if st.session_state.show_letter:
+        dots = ""
 
-    st.divider()
+        for i in range(TOTAL_STORY_SLIDES):
 
-    st.markdown("## ❤️ Always Yours")
+            if i == current:
+                dots += "❤️ "
+            else:
+                dots += "♡ "
 
-    st.caption(
-        "Made with all my heart, just for my Ninii Baby 💕"
-    )
+        st.markdown(
+            f"""
+            <div class="progress-dots">
+                {dots}
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+
+
+        # Story card
+
+        st.markdown(
+            f"""
+            <div class="story-card">
+
+                <div class="story-title">
+                    {slide["title"]}
+                </div>
+
+                <div class="story-text">
+                    {slide["content"]}
+                </div>
+
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+
+
+        st.write("")
+
+
+        # Navigation
+
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+
+        with col1:
+
+            if current > 0:
+
+                if st.button(
+                    "← Previous",
+                    key=f"prev_{current}"
+                ):
+                    st.session_state.current_slide -= 1
+                    st.rerun()
+
+
+        with col3:
+
+            if st.button(
+                "Next →",
+                key=f"next_{current}"
+            ):
+                st.session_state.current_slide += 1
+                st.rerun()
+
+
+    # ========================================================
+    # OUR STORY TIMELINE
+    # ========================================================
+
+    elif current == len(slides):
+
+        st.markdown(
+            f"""
+            <div class="progress-text">
+                Our Memories ❤️
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+
+
+        st.markdown(
+            """
+            <div class="story-card">
+
+                <div class="timeline-title">
+                    Our Story So Far ❤️
+                </div>
+
+                <div class="timeline-subtitle">
+                    Every beautiful memory with you became a little
+                    chapter in my heart.
+                    And this is only the beginning of our story. ❤️
+                </div>
+
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+
+
+        st.write("")
+
+
+        memories = [
+
+            (
+                "14th July ❤️",
+                "🎬",
+                "Our Movie Date",
+                "We went to watch Evil Dead Burn together. One of those simple moments that became a beautiful memory for me. ❤️"
+            ),
+
+            (
+                "16th July 🛵",
+                "🛵",
+                "Our Scooty Drive",
+                "We went on a beautiful scooty ride to Gorai Jetty. Just being with you made the ride special. ❤️"
+            ),
+
+            (
+                "18th July 🚗",
+                "🚗",
+                "Our Car Drive",
+                "We went for a drive together to Madh Island Beach. Another beautiful memory added to our story. ❤️"
+            ),
+
+            (
+                "19th July 🥺",
+                "🥺",
+                "The Day I Dropped You in Pune",
+                "I dropped you in Pune, and honestly, I missed you so much, especially on the way back. ❤️"
+            ),
+
+            (
+                "20th July ❤️",
+                "🥺",
+                "Missing You So Much",
+                "I realised just how much I missed you. Your absence was already starting to feel too big. 🥺❤️"
+            ),
+
+            (
+                "24th July ❤️",
+                "💌",
+                "I Confessed My Feelings",
+                "The day I finally told you what was in my heart. A moment I will always remember. ❤️"
+            ),
+
+            (
+                "1st August 💍❤️",
+                "💍",
+                "I Proposed to You",
+                "One of the most special moments of our story. The day I asked you to be mine. ❤️"
+            ),
+
+            (
+                "6th August 🚴❤️",
+                "🚴",
+                "Cycling Together at SNGP",
+                "We went cycling together at Sanjay Gandhi National Park. Another beautiful day and another beautiful memory with you. ❤️"
+            ),
+
+            (
+                "A Special Day 💎❤️",
+                "💎",
+                "Your First Piece of Jewellery",
+                "Giving you your first piece of jewellery from me was a small gesture, but a very special memory for my heart. ❤️"
+            ),
+
+            (
+                "31st August ❤️",
+                "👨‍👩‍👧‍👦",
+                "I Met Riya Di & Jiju",
+                "I met Riya Di and Jiju, and they even made dinner for me. It was such a warm and special day. ❤️"
+            ),
+
+            (
+                "31st August 🎁❤️",
+                "🎁",
+                "My First Gift From You",
+                "You gave me my first gift — a Hot Wheels. A small gift, but something that will always remind me of you. ❤️"
+            )
+
+        ]
+
+
+        for index, memory in enumerate(memories):
+
+            date, icon, event, text = memory
+
+            st.markdown(
+                f"""
+                <div class="love-timeline">
+
+                    <div class="memory-card">
+
+                        <div class="memory-date">
+                            {date}
+                        </div>
+
+                        <div class="memory-icon">
+                            {icon}
+                        </div>
+
+                        <div class="memory-event">
+                            {event}
+                        </div>
+
+                        <div class="memory-text">
+                            {text}
+                        </div>
+
+                    </div>
+
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+
+
+            if index < len(memories) - 1:
+
+                st.markdown(
+                    """
+                    <div class="memory-connector">
+                        ❤️
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
+
+
+        st.write("")
+
+
+        col1, col2, col3 = st.columns([1, 2, 1])
+
+
+        with col1:
+
+            if st.button(
+                "← Previous",
+                key="timeline_previous"
+            ):
+                st.session_state.current_slide -= 1
+                st.rerun()
+
+
+        with col3:
+
+            if st.button(
+                "Next →",
+                key="timeline_next"
+            ):
+                st.session_state.current_slide += 1
+                st.rerun()
+
+
+    # ========================================================
+    # FINAL LOVE SCREEN
+    # ========================================================
+
+    else:
+
+        st.markdown(
+            """
+            <div class="story-card">
+
+                <div class="final-love-message">
+                    I Love You,<br>
+                    Baby ❤️
+                </div>
+
+                <div class="final-love-subtext">
+                    With all my heart. ❤️
+                </div>
+
+                <br>
+
+                <div class="final-signature">
+                    Forever yours,<br>
+                    Karan ❤️
+                </div>
+
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+
+
+        st.write("")
+        st.write("")
+
+
+        if st.button(
+            "❤️ Read Our Story Again",
+            key="restart_story"
+        ):
+            st.session_state.current_slide = 0
+            st.rerun()
