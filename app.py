@@ -161,7 +161,7 @@ st.markdown(hearts_html, unsafe_allow_html=True)
 # EDIT THESE ❤️
 # ---------------------------------------------------
 
-GIRLFRIEND_NAME = "My Bubuu 
+GIRLFRIEND_NAME = "My Bubuu "
 YOUR_NAME = "Karan❤️"
 
 REASONS = [
