@@ -13,7 +13,7 @@ st.set_page_config(
 
 
 # ============================================================
-# CUSTOMIZE HERE ❤️
+# PERSONAL DETAILS ❤️
 # ============================================================
 
 GIRLFRIEND_NAME = "Shreya"
@@ -29,12 +29,19 @@ st.markdown("""
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@500;600;700&display=swap');
 
+
+/* BACKGROUND */
+
 .stApp {
     background:
         radial-gradient(circle at 10% 5%, rgba(255, 190, 210, 0.8), transparent 30%),
         radial-gradient(circle at 90% 20%, rgba(255, 210, 225, 0.8), transparent 30%),
+        radial-gradient(circle at 50% 100%, rgba(255, 200, 215, 0.7), transparent 35%),
         linear-gradient(135deg, #fff7f9, #ffe9ef, #fff5f8);
 }
+
+
+/* HIDE STREAMLIT UI */
 
 #MainMenu {
     visibility: hidden;
@@ -48,11 +55,17 @@ footer {
     visibility: hidden;
 }
 
+
+/* MAIN CONTAINER */
+
 .block-container {
     max-width: 780px;
     padding-top: 2rem;
     padding-bottom: 4rem;
 }
+
+
+/* PARAGRAPH FONT */
 
 [data-testid="stMarkdownContainer"] p {
     font-family: 'Cormorant Garamond', serif !important;
@@ -61,11 +74,15 @@ footer {
     line-height: 1.75 !important;
 }
 
+
+/* HEADINGS */
+
 h1 {
     font-family: 'Great Vibes', cursive !important;
     color: #c2185b !important;
     text-align: center !important;
     font-size: 68px !important;
+    margin-bottom: 10px !important;
 }
 
 h2 {
@@ -78,24 +95,48 @@ h3 {
     font-family: 'Playfair Display', serif !important;
     color: #d6336c !important;
     text-align: center !important;
+    margin-top: 35px !important;
 }
 
+
+/* LOVE LETTER CARD */
+
 [data-testid="stVerticalBlockBorderWrapper"] {
-    background: rgba(255, 255, 255, 0.92);
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.96),
+            rgba(255, 247, 250, 0.92)
+        );
+
     border-radius: 30px !important;
+
     border: 1px solid rgba(214, 51, 108, 0.18) !important;
-    box-shadow: 0px 15px 45px rgba(190, 50, 95, 0.13) !important;
+
+    box-shadow:
+        0px 15px 45px rgba(190, 50, 95, 0.13) !important;
+
+    padding: 12px;
 }
+
+
+/* CAPTION */
 
 [data-testid="stCaptionContainer"] {
     text-align: center !important;
     color: #8f4a61 !important;
 }
 
+
+/* DIVIDER */
+
 hr {
-    margin-top: 30px !important;
-    margin-bottom: 30px !important;
+    margin-top: 35px !important;
+    margin-bottom: 35px !important;
 }
+
+
+/* MOBILE */
 
 @media (max-width: 600px) {
 
@@ -111,6 +152,10 @@ hr {
 
     h2 {
         font-size: 26px !important;
+    }
+
+    h3 {
+        font-size: 22px !important;
     }
 
     [data-testid="stMarkdownContainer"] p {
@@ -142,6 +187,10 @@ st.divider()
 
 with st.container(border=True):
 
+    # --------------------------------------------------------
+    # INTRO
+    # --------------------------------------------------------
+
     st.markdown("## 💌 My Baby, Read This Slowly")
 
     st.markdown("""
@@ -158,9 +207,13 @@ Not in a perfect way.
 
 Not with perfect words.
 
-Just the way it comes from my heart.
+Bas jaise mere dil mein hai... waise hi.
 
 """)
+
+    # --------------------------------------------------------
+    # LOVE
+    # --------------------------------------------------------
 
     st.markdown("### ❤️ Ninii Baby, I Love You So Much")
 
@@ -178,17 +231,23 @@ A part of my happiness.
 
 A part of my everyday life.
 
-Sometimes something happens during my day and the first person I want to tell is you.
+Kabhi kabhi mere din mein kuch hota hai aur sabse pehle mujhe tumhe batane ka mann karta hai.
 
 Sometimes I see something funny and immediately think about sending it to you, my Ninii Baby.
 
 Sometimes I am doing absolutely nothing, and still somehow you are in my mind.
 
-And honestly, Baby...
+Aur honestly, Baby...
+
+Mujhe tumhara meri life mein hona bahut pasand hai.
 
 I love having you in my life.
 
 """)
+
+    # --------------------------------------------------------
+    # MISSING HER
+    # --------------------------------------------------------
 
     st.markdown("### 🥺 Baby, I Miss You")
 
@@ -196,7 +255,7 @@ I love having you in my life.
 
 I miss you so much, Shreya.
 
-Sometimes I don't even know how to explain how much.
+Kabhi kabhi mujhe khud nahi pata hota ki main tumhe itna kyun miss kar raha hoon.
 
 I miss talking to you.
 
@@ -208,15 +267,17 @@ I miss our conversations.
 
 I miss those small moments that probably don't seem important to anyone else but mean so much to me.
 
-And sometimes, Ninii Baby, I miss you even when we have just talked.
+Aur kabhi kabhi, Ninii Baby, baat karne ke baad bhi tumhari yaad aati hai.
 
 Because when someone becomes this important to your heart, their absence is something you feel.
 
-And Baby...
+Aur Baby...
 
-I feel yours.
+Main tumhari kami feel karta hoon.
 
 There are moments when I just wish you were here.
+
+Kaash tum mere paas hoti.
 
 I wish I could sit with you.
 
@@ -226,13 +287,17 @@ Laugh with you.
 
 Hold you.
 
-And just have you close to me.
+Aur bas tum mere paas hoti.
 
 Nothing complicated.
 
-Just you and me.
+Bas tum aur main.
 
 """)
+
+    # --------------------------------------------------------
+    # FUTURE
+    # --------------------------------------------------------
 
     st.markdown("### 💕 Shreya, I Want You In My Future")
 
@@ -242,7 +307,7 @@ Baby, I don't just want you for today.
 
 I don't just want beautiful conversations and beautiful memories.
 
-I don't want this to be something temporary.
+Main nahi chahta ki hum sirf ek temporary chapter bane ek dusre ki life mein.
 
 I want you in my life.
 
@@ -262,15 +327,21 @@ I want us to grow together.
 
 I want us to understand each other more as time passes.
 
-And even if life becomes difficult sometimes...
+Aur Baby, life chahe kitni bhi difficult ho...
 
-I want us to always find our way back to each other.
+Main chahta hoon ki hum ek dusre ka saath na chhode.
 
-Because, Ninii Baby, you are someone I genuinely want to choose.
+Because, Ninii Baby...
+
+You are someone I genuinely want to choose.
 
 Again and again.
 
 """)
+
+    # --------------------------------------------------------
+    # FUTURE TOGETHER
+    # --------------------------------------------------------
 
     st.markdown("### 🏡 When I Think About My Life, Baby...")
 
@@ -282,7 +353,9 @@ Of course those things are important.
 
 But they are not everything.
 
-When I imagine the life I truly want, I imagine having someone beside me.
+Jab main apni life imagine karta hoon...
+
+Main imagine karta hoon ki mere paas koi ho.
 
 Someone I can come home to.
 
@@ -294,13 +367,17 @@ Someone I can hold onto when life becomes difficult.
 
 Someone who feels like home.
 
-And honestly, Baby...
+Aur honestly, Baby...
 
-When I imagine that person...
+Jab main us person ke baare mein sochta hoon...
 
 I want it to be you.
 
 """)
+
+    # --------------------------------------------------------
+    # HOME
+    # --------------------------------------------------------
 
     st.markdown("### ❤️ Ninii Baby, I Want To Build A Life With You")
 
@@ -324,11 +401,11 @@ Laughing about silly things.
 
 Annoying each other.
 
-Making up after arguments.
+Aur kabhi kabhi argue karke phir ek dusre ko mana lena.
 
 And just living life together.
 
-Not every day has to be perfect.
+Mujhe koi perfect life nahi chahiye, Baby.
 
 I don't want some imaginary perfect life.
 
@@ -340,9 +417,13 @@ Real happiness.
 
 Real memories.
 
-And you beside me through it.
+Aur tum mere saath.
 
 """)
+
+    # --------------------------------------------------------
+    # FAMILY
+    # --------------------------------------------------------
 
     st.markdown("### 👨‍👩‍👧‍👦 Shreya, I Want A Family With You")
 
@@ -352,7 +433,7 @@ This is one of the deepest things in my heart, Baby.
 
 One day, I want to build a family with you.
 
-I want us to have our own little family.
+Humara apna chhota sa family.
 
 Our own home filled with love and laughter.
 
@@ -362,7 +443,9 @@ Our own traditions.
 
 I want us to grow older together.
 
-And one day look back at everything we went through.
+Aur ek din jab hum peeche mudke dekhein...
+
+Toh hum un saare moments ko yaad karein.
 
 The beautiful moments.
 
@@ -376,11 +459,13 @@ The times things were easy.
 
 And the times we had to be strong.
 
-And I hope one day we can look at each other and say...
+Aur phir ek dusre ko dekh ke bolein...
 
-We stayed.
+Hum ruk gaye nahi.
 
-We chose each other.
+Humne ek dusre ko choose kiya.
+
+Humne saath nibhaya.
 
 We made it.
 
@@ -390,9 +475,13 @@ Because when I imagine a family and a life that feels like mine...
 
 Somewhere in that picture...
 
-You are there.
+Tum hoti ho.
 
 """)
+
+    # --------------------------------------------------------
+    # IMPERFECT
+    # --------------------------------------------------------
 
     st.markdown("### 🤍 Baby, I Know I Am Not Perfect")
 
@@ -400,35 +489,209 @@ You are there.
 
 I know I am not perfect, Shreya.
 
-I know I make mistakes.
+Main mistakes karta hoon.
 
-I know sometimes I say the wrong thing.
+Kabhi kabhi main galat bol deta hoon.
 
 Sometimes I don't understand things immediately.
 
-Sometimes I may not express what I am feeling properly.
+Kabhi kabhi main apni feelings properly express nahi kar pata.
 
-And maybe sometimes I don't show you enough how much you mean to me.
+Aur shayad kabhi kabhi main tumhe properly dikha nahi pata ki tum mere liye kitni important ho.
 
 But Baby, please never doubt this.
 
 What I feel for you is real.
 
-I genuinely care about you.
+Main genuinely tumhari care karta hoon.
 
-I genuinely miss you.
+Main genuinely tumhe miss karta hoon.
 
-I genuinely want you in my life.
+Main genuinely tumhe apni life mein chahta hoon.
 
-And I genuinely want to build something beautiful with you.
+Aur main genuinely tumhare saath kuch beautiful build karna chahta hoon.
 
 """)
 
-    st.markdown("### ❤️ If I Had To Choose Again, Ninii Baby...")
+    # --------------------------------------------------------
+    # FIGHTS AND DISAGREEMENTS
+    # --------------------------------------------------------
+
+    st.markdown("### ❤️ Baby, Ek Baat Main Dil Se Kehna Chahta Hoon...")
 
     st.markdown("""
 
-I would still choose you.
+Baby...
+
+Main jaanta hoon ki humare beech fights hongi.
+
+Disagreements honge.
+
+Kabhi kabhi hum ek dusre se naraz honge.
+
+Kabhi tum mujhe samajh nahi paogi.
+
+Kabhi main tumhe samajhne mein galti karunga.
+
+Kabhi hum dono gusse mein kuch aisa bol denge jo humein nahi bolna chahiye tha.
+
+Aur sach bolu, Baby...
+
+Shayad kabhi kabhi aisa lagega ki hum dono ek dusre ke against khade hain.
+
+But I want you to remember something.
+
+**A fight between us does not mean that our love is over.**
+
+A disagreement does not mean that our relationship is doomed.
+
+Narazgi ka matlab yeh nahi hai ki hum ek dusre ko khona chahte hain.
+
+Hum dono perfect nahi hain, Baby.
+
+Aur shayad humara relationship bhi kabhi perfect nahi hoga.
+
+But perfect hona zaroori bhi nahi hai.
+
+**Saath rehna zaroori hai.**
+
+Ek dusre ko samajhne ki koshish karna zaroori hai.
+
+Gusse ke baad bhi ek dusre ka haath nahi chhodna zaroori hai.
+
+Because Baby, I don't want us to give up on each other just because we are having a difficult moment.
+
+Ek difficult day doesn't mean we have a difficult life.
+
+Ek fight doesn't mean our relationship is broken.
+
+Ek disagreement doesn't mean that our love has failed.
+
+Main nahi chahta ki har fight ke baad hum sochein...
+
+"Maybe this is the end."
+
+Instead, I want us to think...
+
+**Hum dono milke isse solve karenge.**
+
+Because for me, Baby...
+
+**It should never be you versus me.**
+
+It should always be...
+
+**You and me versus the problem. ❤️**
+
+""")
+
+    # --------------------------------------------------------
+    # STAYING TOGETHER
+    # --------------------------------------------------------
+
+    st.markdown("### 🤝 Ninii Baby, Difficult Doesn't Mean The End")
+
+    st.markdown("""
+
+Main nahi chahta ki ek misunderstanding humare beech itni badi deewar ban jaaye ki hum ek dusre ko hi bhool jaayein.
+
+I want us to talk.
+
+I want us to listen.
+
+I want us to calm down.
+
+Aur phir chahe kitna bhi gussa ho...
+
+I want us to find our way back to each other.
+
+Because Ninii Baby...
+
+I don't see one fight as the end of our story.
+
+I don't see disagreements as a reason to stop loving you.
+
+I don't see difficult moments and think that our relationship is doomed.
+
+I see them as moments where we need to understand each other a little more.
+
+Love is not just about being happy when everything is perfect.
+
+Pyaar ka asli matlab shayad tab samajh aata hai...
+
+Jab things are not perfect.
+
+Jab hum naraz hote hain.
+
+Jab misunderstandings hoti hain.
+
+Aur phir bhi...
+
+Hum ek dusre ko choose karte hain.
+
+Baby, main tumhe sirf easy days ke liye nahi chahta.
+
+I want you during the difficult days too.
+
+Jab main mood mein na hoon.
+
+Jab tum upset ho.
+
+Jab hum agree na karein.
+
+Jab life complicated ho.
+
+I want us to learn.
+
+I want us to grow.
+
+I want us to become better for each other.
+
+But I don't want us to leave each other just because things become difficult.
+
+""")
+
+    # --------------------------------------------------------
+    # LAST BREATH
+    # --------------------------------------------------------
+
+    st.markdown("### ❤️ Shreya, I See Myself With You Till My Last Breath")
+
+    st.markdown("""
+
+Because Shreya...
+
+Main tumhe sirf aaj ke liye nahi dekh raha.
+
+When I think about my life ahead...
+
+I see you.
+
+When I think about growing older...
+
+I see you.
+
+When I think about having a home...
+
+I see you.
+
+When I think about having a family...
+
+I see you.
+
+And honestly, Baby...
+
+**I see myself with you till my last breath. ❤️**
+
+Maybe life will not always go according to our plans.
+
+Maybe there will be difficult phases.
+
+Maybe there will be days when loving each other feels harder than usual.
+
+But even then...
+
+I want to choose you.
 
 Again.
 
@@ -436,23 +699,31 @@ And again.
 
 And again.
 
-Not because everything is always perfect.
+Ninii Baby, ek promise main tumse dil se karna chahta hoon...
 
-But because when I think about you, I feel something real.
+Whenever we fight, please don't think that I stopped loving you.
 
-I see someone I want to understand.
+Whenever we disagree, please don't think that I want to leave you.
 
-Someone I want to make happy.
+Whenever things become difficult, please remember...
 
-Someone I want beside me.
+**Difficult doesn't mean impossible.**
 
-Someone I want to build a future with.
+Humara relationship kisi ek fight se define nahi hoga.
 
-You are not just someone I love, Baby.
+Humara pyaar kisi ek disagreement se khatam nahi hoga.
 
-You are someone I see in my life.
+Because what I feel for you is much bigger than one bad day.
+
+Much bigger than one argument.
+
+Much bigger than one misunderstanding.
 
 """)
+
+    # --------------------------------------------------------
+    # FINAL MESSAGE
+    # --------------------------------------------------------
 
     st.markdown("## ❤️ Shreya, I Love You")
 
@@ -486,49 +757,61 @@ are now our real life.
 
 You and me.
 
-Our home.
+Humara ghar.
 
-Our family.
+Humari family.
 
-Our memories.
+Humari memories.
 
-Our life.
+Humari life.
 
-And Baby...
+Aur Baby...
 
 I know I don't always say everything perfectly.
 
 But please remember this.
 
-I love you.
+**I love you.**
 
 So much more than I am able to explain.
 
-I miss you.
+**I miss you.**
 
 More than you probably realise.
 
-And Ninii Baby...
+Aur Ninii Baby...
 
-You will always have a very special place in my heart.
+No matter how difficult things become...
 
-I just hope that one day, when we look back at this time in our lives...
+I don't want a life without you in it.
 
-we smile.
+Main chahta hoon ki hum dono har phase se saath guzrein.
 
-Because we stayed.
+Aaj.
 
-Because we chose each other.
+Kal.
 
-Because somehow...
+Aur jitna bhi time humein zindagi saath de.
 
-our story became the life we always dreamed about.
+Because Baby...
 
-I love you, Shreya.
+Mere dil mein tumhare liye sirf aaj ka pyaar nahi hai.
 
-I love you, Baby.
+Main tumhe apni zindagi ke har kal mein dekhna chahta hoon.
 
-I love you, my Ninii Baby. ❤️
+Till my last breath...
+
+**I want it to be you, Shreya. ❤️**
+
+You.
+
+My Baby.
+
+My Shreya.
+
+My Ninii Baby.
+
+❤️
 
 Forever yours,
 
