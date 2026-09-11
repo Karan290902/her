@@ -222,6 +222,126 @@ st.markdown(
 
 
     /* ============================================================
+       OUR STORY TIMELINE
+    ============================================================ */
+
+    .timeline-title {
+        font-family: 'Great Vibes', cursive !important;
+        color: #c2185b !important;
+        text-align: center !important;
+        font-size: 62px !important;
+        margin-top: 55px !important;
+        margin-bottom: 8px !important;
+    }
+
+    .timeline-subtitle {
+        font-family: 'Cormorant Garamond', serif !important;
+        color: #8a5363 !important;
+        text-align: center !important;
+        font-size: 25px !important;
+        font-style: italic !important;
+        margin-bottom: 35px !important;
+    }
+
+    .timeline {
+        position: relative;
+        max-width: 680px;
+        margin: 0 auto;
+        padding: 10px 0 25px 0;
+    }
+
+    .timeline::before {
+        content: "";
+        position: absolute;
+        width: 3px;
+        background: linear-gradient(
+            to bottom,
+            #f7a0bd,
+            #c2185b,
+            #f7a0bd
+        );
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 10px;
+    }
+
+    .timeline-item {
+        position: relative;
+        width: 50%;
+        padding: 10px 35px;
+        box-sizing: border-box;
+    }
+
+    .timeline-item.left {
+        left: 0;
+        text-align: right;
+    }
+
+    .timeline-item.right {
+        left: 50%;
+        text-align: left;
+    }
+
+    .timeline-dot {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        background: #c2185b;
+        border: 4px solid #ffeef3;
+        border-radius: 50%;
+        top: 28px;
+        box-shadow: 0 4px 12px rgba(194, 24, 91, 0.35);
+    }
+
+    .timeline-item.left .timeline-dot {
+        right: -13px;
+    }
+
+    .timeline-item.right .timeline-dot {
+        left: -13px;
+    }
+
+    .timeline-card {
+        background: rgba(255, 255, 255, 0.94);
+        border: 1px solid rgba(194, 24, 91, 0.18);
+        border-radius: 18px;
+        padding: 18px 20px;
+        box-shadow: 0 8px 22px rgba(194, 24, 91, 0.10);
+        transition: transform 0.25s ease;
+    }
+
+    .timeline-card:hover {
+        transform: translateY(-3px);
+    }
+
+    .timeline-date {
+        font-family: 'Playfair Display', serif !important;
+        color: #c2185b !important;
+        font-size: 18px !important;
+        font-weight: 700 !important;
+        margin-bottom: 6px !important;
+    }
+
+    .timeline-event {
+        font-family: 'Cormorant Garamond', serif !important;
+        color: #452631 !important;
+        font-size: 23px !important;
+        font-weight: 700 !important;
+        line-height: 1.25 !important;
+    }
+
+    .timeline-memory {
+        font-family: 'Cormorant Garamond', serif !important;
+        color: #8a5363 !important;
+        font-size: 19px !important;
+        line-height: 1.35 !important;
+        margin-top: 7px !important;
+    }
+
+
+    /* ============================================================
        FINAL LOVE MESSAGE
     ============================================================ */
 
@@ -259,7 +379,7 @@ st.markdown(
        MOBILE
     ============================================================ */
 
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
 
         .block-container {
             padding-left: 16px !important;
@@ -287,6 +407,41 @@ st.markdown(
         [data-testid="stButton"] > button {
             min-width: 230px !important;
             font-size: 17px !important;
+        }
+
+        .timeline-title {
+            font-size: 48px !important;
+        }
+
+        .timeline-subtitle {
+            font-size: 22px !important;
+        }
+
+        .timeline::before {
+            left: 22px;
+        }
+
+        .timeline-item {
+            width: 100%;
+            padding-left: 52px;
+            padding-right: 0;
+            padding-bottom: 14px;
+            left: 0 !important;
+            text-align: left !important;
+        }
+
+        .timeline-item.left .timeline-dot,
+        .timeline-item.right .timeline-dot {
+            left: 9px;
+            right: auto;
+        }
+
+        .timeline-event {
+            font-size: 21px !important;
+        }
+
+        .timeline-memory {
+            font-size: 18px !important;
         }
 
         .final-love-message {
@@ -330,7 +485,9 @@ if not st.session_state.show_letter:
 
     st.markdown("### Something I wanted to say properly...")
 
-    st.markdown("### Something that comes directly from my heart. ❤️")
+    st.markdown(
+        "### Something that comes directly from my heart. ❤️"
+    )
 
     st.write("")
 
@@ -338,7 +495,6 @@ if not st.session_state.show_letter:
 
     st.write("")
 
-    # CENTER-ALIGNED BUTTON
     if st.button(
         "💌 Tap Here, Baby... ❤️",
         key="welcome_button"
@@ -635,6 +791,210 @@ Whenever we disagree, please don't think that I want to leave you.
 
 **Difficult doesn't mean impossible. ❤️**
 """)
+
+
+        # ============================================================
+        # OUR LITTLE STORY TIMELINE ❤️
+        # ============================================================
+
+        st.markdown(
+            """
+            <div class="timeline-title">
+                Our Little Story ❤️
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+
+        st.markdown(
+            """
+            <div class="timeline-subtitle">
+                Every little moment somehow brought me closer to you... ❤️
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+
+
+        timeline_html = """
+        <div class="timeline">
+
+
+            <div class="timeline-item left">
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+                    <div class="timeline-date">14th July ❤️</div>
+                    <div class="timeline-event">🎬 Our Movie Date</div>
+                    <div class="timeline-memory">
+                        We went to watch Evil Dead Burn together.
+                        One of those simple moments that became a beautiful memory for me. ❤️
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="timeline-item right">
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+                    <div class="timeline-date">16th July 🛵</div>
+                    <div class="timeline-event">Our Scooty Drive</div>
+                    <div class="timeline-memory">
+                        We went on a beautiful scooty ride to Gorai Jetty.
+                        Just being with you made the ride special. ❤️
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="timeline-item left">
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+                    <div class="timeline-date">18th July 🚗</div>
+                    <div class="timeline-event">Our Car Drive</div>
+                    <div class="timeline-memory">
+                        We went for a drive together to Madh Island Beach.
+                        Another beautiful memory added to our story. ❤️
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="timeline-item right">
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+                    <div class="timeline-date">19th July 🥺</div>
+                    <div class="timeline-event">
+                        The Day I Dropped You in Pune
+                    </div>
+                    <div class="timeline-memory">
+                        I dropped you in Pune, and honestly...
+                        I missed you so much, especially on the way back. ❤️
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="timeline-item left">
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+                    <div class="timeline-date">20th July ❤️</div>
+                    <div class="timeline-event">Missing You So Much</div>
+                    <div class="timeline-memory">
+                        I realised just how much I missed you.
+                        Your absence was already starting to feel too big. 🥺❤️
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="timeline-item right">
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+                    <div class="timeline-date">24th July ❤️</div>
+                    <div class="timeline-event">
+                        I Confessed My Feelings
+                    </div>
+                    <div class="timeline-memory">
+                        The day I finally told you what was in my heart.
+                        A moment I will always remember. ❤️
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="timeline-item left">
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+                    <div class="timeline-date">1st August 💍❤️</div>
+                    <div class="timeline-event">
+                        I Proposed to You
+                    </div>
+                    <div class="timeline-memory">
+                        One of the most special moments of our story.
+                        The day I asked you to be mine. ❤️
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="timeline-item right">
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+                    <div class="timeline-date">6th August 🚴❤️</div>
+                    <div class="timeline-event">
+                        Cycling Together at SNGP
+                    </div>
+                    <div class="timeline-memory">
+                        We went cycling together at Sanjay Gandhi National Park.
+                        Another beautiful day and another beautiful memory with you. ❤️
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="timeline-item left">
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+                    <div class="timeline-date">A Special Day 💎❤️</div>
+                    <div class="timeline-event">
+                        Your First Piece of Jewellery
+                    </div>
+                    <div class="timeline-memory">
+                        Giving you your first piece of jewellery from me
+                        was a small gesture, but a very special memory for my heart. ❤️
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="timeline-item right">
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+                    <div class="timeline-date">31st August ❤️</div>
+                    <div class="timeline-event">
+                        I Met Riya Di & Jiju
+                    </div>
+                    <div class="timeline-memory">
+                        I met Riya Di and Jiju, and they even made dinner for me.
+                        It was such a warm and special day. ❤️
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="timeline-item left">
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+                    <div class="timeline-date">31st August 🎁❤️</div>
+                    <div class="timeline-event">
+                        My First Gift From You
+                    </div>
+                    <div class="timeline-memory">
+                        You gave me my first gift — a Hot Wheels.
+                        A small gift, but something that will always remind me of you. ❤️
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        """
+
+        st.markdown(
+            timeline_html,
+            unsafe_allow_html=True
+        )
 
 
         # ============================================================
