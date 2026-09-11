@@ -1,3 +1,141 @@
+import streamlit as st
+
+# ============================================================
+# PAGE CONFIG
+# ============================================================
+
+st.set_page_config(
+    page_title="For My Ninii Baby ❤️",
+    page_icon="❤️",
+    layout="centered",
+    initial_sidebar_state="collapsed"
+)
+
+
+# ============================================================
+# CUSTOMIZE HERE ❤️
+# ============================================================
+
+GIRLFRIEND_NAME = "Shreya"
+YOUR_NAME = "Karan"
+
+
+# ============================================================
+# ROMANTIC DESIGN
+# ============================================================
+
+st.markdown("""
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@500;600;700&display=swap');
+
+.stApp {
+    background:
+        radial-gradient(circle at 10% 5%, rgba(255, 190, 210, 0.8), transparent 30%),
+        radial-gradient(circle at 90% 20%, rgba(255, 210, 225, 0.8), transparent 30%),
+        linear-gradient(135deg, #fff7f9, #ffe9ef, #fff5f8);
+}
+
+#MainMenu {
+    visibility: hidden;
+}
+
+header {
+    visibility: hidden;
+}
+
+footer {
+    visibility: hidden;
+}
+
+.block-container {
+    max-width: 780px;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+[data-testid="stMarkdownContainer"] p {
+    font-family: 'Cormorant Garamond', serif !important;
+    color: #4b2632 !important;
+    font-size: 22px !important;
+    line-height: 1.75 !important;
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive !important;
+    color: #c2185b !important;
+    text-align: center !important;
+    font-size: 68px !important;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif !important;
+    color: #c2185b !important;
+    text-align: center !important;
+}
+
+h3 {
+    font-family: 'Playfair Display', serif !important;
+    color: #d6336c !important;
+    text-align: center !important;
+}
+
+[data-testid="stVerticalBlockBorderWrapper"] {
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 30px !important;
+    border: 1px solid rgba(214, 51, 108, 0.18) !important;
+    box-shadow: 0px 15px 45px rgba(190, 50, 95, 0.13) !important;
+}
+
+[data-testid="stCaptionContainer"] {
+    text-align: center !important;
+    color: #8f4a61 !important;
+}
+
+hr {
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+}
+
+@media (max-width: 600px) {
+
+    .block-container {
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 1.5rem;
+    }
+
+    h1 {
+        font-size: 52px !important;
+    }
+
+    h2 {
+        font-size: 26px !important;
+    }
+
+    [data-testid="stMarkdownContainer"] p {
+        font-size: 20px !important;
+        line-height: 1.7 !important;
+    }
+}
+
+</style>
+""", unsafe_allow_html=True)
+
+
+# ============================================================
+# HEADER
+# ============================================================
+
+st.markdown("# ❤️")
+
+st.markdown(f"# My Ninii Baby, {GIRLFRIEND_NAME} ❤️")
+
+st.caption("A little piece of my heart, written only for you, Baby ❤️")
+
+st.divider()
+
+
 # ============================================================
 # LOVE LETTER
 # ============================================================
@@ -42,13 +180,11 @@ A part of my everyday life.
 
 Sometimes something happens during my day and the first person I want to tell is you.
 
-Sometimes I see something funny and I immediately think, "I want to send this to Ninii Baby."
+Sometimes I see something funny and immediately think about sending it to you, my Ninii Baby.
 
 Sometimes I am doing absolutely nothing, and still somehow you are in my mind.
 
 And honestly, Baby...
-
-I love that.
 
 I love having you in my life.
 
@@ -74,7 +210,7 @@ I miss those small moments that probably don't seem important to anyone else but
 
 And sometimes, Ninii Baby, I miss you even when we have just talked.
 
-Because when someone becomes this important to you, their absence is something your heart feels.
+Because when someone becomes this important to your heart, their absence is something you feel.
 
 And Baby...
 
@@ -98,13 +234,11 @@ Just you and me.
 
 """)
 
-    st.markdown("### 💕 Shreya, I Don't Just Want You For Today")
+    st.markdown("### 💕 Shreya, I Want You In My Future")
 
     st.markdown("""
 
-This is something I really want you to understand, Baby.
-
-I don't just want you for today.
+Baby, I don't just want you for today.
 
 I don't just want beautiful conversations and beautiful memories.
 
@@ -114,13 +248,11 @@ I want you in my life.
 
 I want you in my future.
 
-I want to create more memories with you.
-
-I want to travel with you.
+I want to make more memories with you.
 
 I want to laugh with you.
 
-I want to have stupid arguments with you and then make up again.
+I want to have silly arguments with you and then make up again.
 
 I want to see you happy.
 
@@ -128,11 +260,11 @@ I want to be there when you need someone.
 
 I want us to grow together.
 
-I want us to understand each other more and more as time passes.
+I want us to understand each other more as time passes.
 
 And even if life becomes difficult sometimes...
 
-I want us to find our way back to each other.
+I want us to always find our way back to each other.
 
 Because, Ninii Baby, you are someone I genuinely want to choose.
 
@@ -150,9 +282,7 @@ Of course those things are important.
 
 But they are not everything.
 
-When I imagine the life I truly want...
-
-I imagine having someone beside me.
+When I imagine the life I truly want, I imagine having someone beside me.
 
 Someone I can come home to.
 
@@ -170,11 +300,9 @@ When I imagine that person...
 
 I want it to be you.
 
-I want to build a life with you.
-
 """)
 
-    st.markdown("### ❤️ Ninii Baby, I Dream About Our Little Life Together")
+    st.markdown("### ❤️ Ninii Baby, I Want To Build A Life With You")
 
     st.markdown("""
 
@@ -216,7 +344,7 @@ And you beside me through it.
 
 """)
 
-    st.markdown("### 👨‍👩‍👧‍👦 Shreya, I Want To Build A Family With You")
+    st.markdown("### 👨‍👩‍👧‍👦 Shreya, I Want A Family With You")
 
     st.markdown("""
 
@@ -254,7 +382,7 @@ We stayed.
 
 We chose each other.
 
-We made it through everything.
+We made it.
 
 That thought genuinely makes me happy, Ninii Baby.
 
@@ -294,10 +422,6 @@ I genuinely want you in my life.
 
 And I genuinely want to build something beautiful with you.
 
-I don't expect everything to always be perfect.
-
-I just want us to keep choosing each other.
-
 """)
 
     st.markdown("### ❤️ If I Had To Choose Again, Ninii Baby...")
@@ -320,8 +444,6 @@ I see someone I want to understand.
 
 Someone I want to make happy.
 
-Someone I want to protect.
-
 Someone I want beside me.
 
 Someone I want to build a future with.
@@ -329,8 +451,6 @@ Someone I want to build a future with.
 You are not just someone I love, Baby.
 
 You are someone I see in my life.
-
-And that means so much to me.
 
 """)
 
@@ -390,9 +510,7 @@ More than you probably realise.
 
 And Ninii Baby...
 
-No matter how many people come and go in life...
-
-you will always have a very special place in my heart.
+You will always have a very special place in my heart.
 
 I just hope that one day, when we look back at this time in our lives...
 
@@ -400,11 +518,9 @@ we smile.
 
 Because we stayed.
 
-Because we fought for each other.
-
 Because we chose each other.
 
-And because somehow...
+Because somehow...
 
 our story became the life we always dreamed about.
 
@@ -419,3 +535,14 @@ Forever yours,
 ## {YOUR_NAME} ❤️
 
 """)
+
+
+# ============================================================
+# FOOTER
+# ============================================================
+
+st.divider()
+
+st.markdown("### ❤️ Always Yours")
+
+st.caption("Made with all my heart, just for my Ninii Baby 💕")
