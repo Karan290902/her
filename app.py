@@ -212,6 +212,42 @@ h3 {
 
 
 /* ============================================================
+   FINAL LOVE MESSAGE
+============================================================ */
+
+.final-love-message {
+    font-family: 'Great Vibes', cursive !important;
+    font-size: 82px !important;
+    color: #c2185b !important;
+    text-align: center !important;
+    line-height: 1.15 !important;
+    margin-top: 55px !important;
+    margin-bottom: 10px !important;
+    padding: 10px !important;
+}
+
+
+.final-love-subtext {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 30px !important;
+    font-style: italic !important;
+    color: #8a5363 !important;
+    text-align: center !important;
+    margin-bottom: 28px !important;
+}
+
+
+.final-signature {
+    font-family: 'Great Vibes', cursive !important;
+    font-size: 42px !important;
+    color: #c2185b !important;
+    text-align: center !important;
+    line-height: 1.25 !important;
+    margin-bottom: 30px !important;
+}
+
+
+/* ============================================================
    MOBILE
 ============================================================ */
 
@@ -243,6 +279,19 @@ h3 {
     .stButton > button {
         font-size: 17px !important;
     }
+
+    .final-love-message {
+        font-size: 58px !important;
+        margin-top: 40px !important;
+    }
+
+    .final-love-subtext {
+        font-size: 25px !important;
+    }
+
+    .final-signature {
+        font-size: 36px !important;
+    }
 }
 
 </style>
@@ -270,7 +319,9 @@ if not st.session_state.show_letter:
 
     st.markdown("### Something I wanted to say properly...")
 
-    st.markdown("### Something that comes directly from my heart. ❤️")
+    st.markdown(
+        "### Something that comes directly from my heart. ❤️"
+    )
 
     st.write("")
 
@@ -294,7 +345,9 @@ else:
 
     st.markdown("# ❤️")
 
-    st.markdown(f"# My {NICKNAME}, {GIRLFRIEND_NAME} ❤️")
+    st.markdown(
+        f"# My {NICKNAME}, {GIRLFRIEND_NAME} ❤️"
+    )
 
     st.caption(
         "A little piece of my heart, written only for you, Baby ❤️"
@@ -327,11 +380,11 @@ Shreya, I don't think you truly understand how important you have become to me.
 
 You are not just someone I love, Baby. You have become a part of my life, a part of my thoughts, a part of my happiness and a part of my everyday life.
 
-Kabhi kabhi mere din mein kuch hota hai aur sabse pehle mujhe aapko batane ka mann karta hai. Sometimes I see something funny and immediately think about sending it to you.
+Kabhi kabhi mere din mein kuch hota hai aur sabse pehle mujhe tumhe batane ka mann karta hai. Sometimes I see something funny and immediately think about sending it to you.
 
 Sometimes I am doing absolutely nothing, and still somehow you are in my mind.
 
-Aur honestly, Baby... mujhe aapki meri life mein hona bahut pasand hai.
+Aur honestly, Baby... mujhe tumhara meri life mein hona bahut pasand hai.
 
 I genuinely love having you in my life. ❤️
 """)
@@ -343,21 +396,21 @@ I genuinely love having you in my life. ❤️
         st.markdown("""
 I miss you so much, Shreya.
 
-Kabhi kabhi mujhe khud nahi pata hota ki main aapko itna kyun miss kar raha hoon. I miss talking to you, I miss hearing from you, I miss your presence and I miss our conversations.
+Kabhi kabhi mujhe khud nahi pata hota ki main tumhe itna kyun miss kar raha hoon. I miss talking to you, I miss hearing from you, I miss your presence and I miss our conversations.
 
 I even miss those small moments that probably don't seem important to anyone else but mean so much to me.
 
-Aur kabhi kabhi, Ninii Baby, baat karne ke baad bhi aapki yaad aati hai.
+Aur kabhi kabhi, Ninii Baby, baat karne ke baad bhi tumhari yaad aati hai.
 
 Because when someone becomes this important to your heart, their absence is something you feel.
 
-Aur Baby, main aapki kami feel karta hoon.
+Aur Baby, main tumhari kami feel karta hoon.
 
-There are moments when I just wish you were here. Kaash aap mere paas hote.
+There are moments when I just wish you were here. Kaash tum mere paas hoti.
 
 Nothing complicated.
 
-Bas aap aur main. ❤️
+Bas tum aur main. ❤️
 """)
 
 
@@ -421,7 +474,7 @@ Mujhe koi perfect life nahi chahiye, Baby.
 
 I just want a real life, with real problems, real happiness and real memories.
 
-Aur aap mere saath.
+Aur tum mere saath.
 """)
 
 
@@ -451,7 +504,7 @@ We made it. ❤️
 
 Because when I imagine a family and a life that feels like mine...
 
-Aap us picture mein hote ho.
+Tum us picture mein hoti ho.
 """)
 
 
@@ -465,19 +518,19 @@ Main mistakes karta hoon. Kabhi kabhi main galat bol deta hoon.
 
 Sometimes I don't understand things immediately, aur kabhi kabhi main apni feelings properly express nahi kar pata.
 
-Shayad kabhi kabhi main aapko properly dikha bhi nahi pata ki aap mere liye kitni important ho.
+Shayad kabhi kabhi main tumhe properly dikha bhi nahi pata ki tum mere liye kitni important ho.
 
 But Baby, please never doubt this.
 
 **What I feel for you is real.**
 
-Main genuinely aapki care karta hoon.
+Main genuinely tumhari care karta hoon.
 
-Main genuinely aapko miss karta hoon.
+Main genuinely tumhe miss karta hoon.
 
-Main genuinely aapko apni life mein chahta hoon.
+Main genuinely tumhe apni life mein chahta hoon.
 
-Aur main genuinely aapke saath kuch beautiful build karna chahta hoon. ❤️
+Aur main genuinely tumhare saath kuch beautiful build karna chahta hoon. ❤️
 """)
 
 
@@ -489,7 +542,7 @@ Baby, main jaanta hoon ki humare beech fights hongi. Disagreements honge.
 
 Kabhi kabhi hum ek dusre se naraz honge.
 
-Kabhi aap mujhe samajh nahi paogi, aur kabhi main aapko samajhne mein galti karunga.
+Kabhi tum mujhe samajh nahi paogi, aur kabhi main tumhe samajhne mein galti karunga.
 
 Kabhi hum dono gusse mein kuch aisa bol denge jo humein nahi bolna chahiye tha.
 
@@ -549,7 +602,7 @@ I want us to find our way back to each other.
 
 
         st.markdown("""
-Because Shreya, main aapko sirf aaj ke liye nahi dekh raha.
+Because Shreya, main tumhe sirf aaj ke liye nahi dekh raha.
 
 When I think about my life ahead, I see you.
 
@@ -585,88 +638,39 @@ Whenever we disagree, please don't think that I want to leave you.
 """)
 
 
-        st.markdown("## ❤️ Shreya, I Love You")
+        # ============================================================
+        # FINAL LOVE MESSAGE ❤️
+        # ============================================================
+
+        st.markdown(
+            '''
+            <div class="final-love-message">
+                I Love You, Baby ❤️
+            </div>
+            ''',
+            unsafe_allow_html=True
+        )
 
 
-        st.markdown(f"""
-Baby, I don't know exactly what the future will look like.
+        st.markdown(
+            '''
+            <div class="final-love-subtext">
+                With all my heart. ❤️
+            </div>
+            ''',
+            unsafe_allow_html=True
+        )
 
-I don't know what challenges life will bring us.
 
-But I know one thing.
-
-**I want you to be a part of my life.**
-
-I want more than just memories with you.
-
-I want more than just conversations.
-
-I want a life with you.
-
-A home with you.
-
-A family with you.
-
-A future with you.
-
-I want to wake up one day and realise that all the things we once dreamed about are now our real life.
-
-You and me.
-
-Humara ghar.
-
-Humari family.
-
-Humari memories.
-
-Humari life. ❤️
-
-Aur Baby, I know I don't always say everything perfectly.
-
-But please remember this.
-
-**I love you.**
-
-So much more than I am able to explain.
-
-**I miss you.**
-
-More than you probably realise.
-
-Aur Ninii Baby...
-
-No matter how difficult things become...
-
-**I don't want a life without you in it.**
-
-Main chahta hoon ki hum dono har phase se saath guzrein.
-
-Aaj.
-
-Kal.
-
-Aur jitna bhi time humein zindagi saath de.
-
-Because Baby, mere dil mein aapke liye sirf aaj ka pyaar nahi hai.
-
-Main aapko apni zindagi ke har kal mein dekhna chahta hoon.
-
-Till my last breath...
-
-**I want it to be you, Shreya. ❤️**
-
-You.
-
-My Baby.
-
-My Shreya.
-
-My Ninii Baby. ❤️
-
-Forever yours,
-
-## {YOUR_NAME} ❤️
-""")
+        st.markdown(
+            f'''
+            <div class="final-signature">
+                Forever yours,<br>
+                {YOUR_NAME} ❤️
+            </div>
+            ''',
+            unsafe_allow_html=True
+        )
 
 
 # ============================================================
