@@ -1,9 +1,4 @@
 import streamlit as st
-import random
-
-# ==================================================
-# PAGE CONFIG
-# ==================================================
 
 st.set_page_config(
     page_title="For My Bubuu ❤️",
@@ -12,58 +7,26 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
-
 # ==================================================
-# PERSONALIZE HERE ❤️
+# CUSTOMIZE HERE
 # ==================================================
 
 GIRLFRIEND_NAME = "My Bubuu ❤️"
 YOUR_NAME = "Karan ❤️"
 
 
-REASONS = [
-    "Your smile makes even my worst days better.",
-    "You make ordinary moments feel special.",
-    "I love how comfortable I feel with you.",
-    "You are the person I want to share everything with.",
-    "Even our silly conversations mean so much to me.",
-    "You have become such a beautiful part of my life."
-]
-
-
-LOVE_MESSAGES = [
-    "You are my favourite notification. ❤️",
-    "I still smile when I see your name on my phone. 🥰",
-    "You are my favourite person to annoy. 😂❤️",
-    "If I had to choose again, I would still choose you. ❤️",
-    "My day feels better when I talk to you. 💕",
-    "You make my ordinary days feel special. ✨",
-    "You are one of my favourite things about my life. ❤️"
-]
-
-
 # ==================================================
-# CUSTOM CSS
-# ONLY FOR PAGE AND BUTTON DESIGN
+# CSS
 # ==================================================
 
 st.markdown("""
 <style>
 
 .stApp {
-    background: linear-gradient(
-        135deg,
-        #fff5f8,
-        #ffe9f0,
-        #fff0f5
-    );
+    background: linear-gradient(135deg, #fff5f7, #ffe6ee, #fff0f5);
 }
 
 #MainMenu {
-    visibility: hidden;
-}
-
-footer {
     visibility: hidden;
 }
 
@@ -71,29 +34,23 @@ header {
     visibility: hidden;
 }
 
+footer {
+    visibility: hidden;
+}
+
 .block-container {
-    max-width: 700px;
+    max-width: 750px;
     padding-top: 2rem;
     padding-bottom: 3rem;
 }
 
-.stButton > button {
-    width: 100%;
-    border-radius: 18px;
-    padding: 14px;
-    font-size: 17px;
-    font-weight: 700;
-    border: none;
-    background: linear-gradient(
-        135deg,
-        #e63970,
-        #ff6b95
-    );
-    color: white;
+.title {
+    text-align: center;
 }
 
-.stButton > button:hover {
-    transform: scale(1.02);
+.stButton > button {
+    width: 100%;
+    border-radius: 15px;
 }
 
 </style>
@@ -101,7 +58,7 @@ header {
 
 
 # ==================================================
-# HERO SECTION
+# LOVE LETTER
 # ==================================================
 
 st.markdown("# ❤️")
@@ -110,176 +67,157 @@ st.markdown(
     f"# Hey {GIRLFRIEND_NAME}"
 )
 
-st.caption("I made this little place just for you 🥰")
+st.caption("There are some things I want you to know... ❤️")
 
 st.divider()
 
 
-# ==================================================
-# OPENING MESSAGE
-# ==================================================
-
 with st.container(border=True):
 
-    st.markdown("## 💌 A Little Message For You")
+    st.markdown("## 💌 From My Heart To Yours")
 
-    st.write(
-        """
-I don't think words will ever be enough to explain how much you mean to me.
+    st.write(f"""
+My love,
 
-You are not just someone I love. You have become such an important part
-of my life, my happiness, my thoughts and my heart.
+I don't know if I will ever be able to find the perfect words to explain
+how much you truly mean to me.
 
-No matter how many times I say "I love you", I don't think those words
-will ever fully explain how deeply I feel about you. ❤️
-"""
-    )
+Sometimes I feel like no matter how many times I say "I love you",
+those three words are still not enough to describe what I feel for you.
 
+You have become such an important part of my life.
 
-# ==================================================
-# HOW MUCH I LOVE YOU
-# ==================================================
+You are someone I think about during my day.
 
-st.markdown("## ❤️ Something You Should Know")
+You are someone I want to share my happiness with.
 
-if st.button("How much do I love you? ❤️"):
+You are someone I want to talk to when something happens.
 
-    st.balloons()
+And you are someone I miss even when we have just spoken.
 
-    with st.container(border=True):
+I miss you more than I can explain.
 
-        st.markdown("## More Than You Know ❤️")
+I miss talking to you.
 
-        st.write(
-            """
-More than I can explain.
+I miss hearing from you.
 
-More than I can put into words.
+I miss your presence.
 
-More than yesterday.
+And sometimes, I simply miss having you close to me.
 
-And hopefully even more tomorrow. ❤️
+But more than just missing you, I want you.
 
-If love could be measured, I still don't think there would be a number
-big enough to describe what I feel for you. 🥺❤️
-"""
-        )
+I want you to be a part of my life.
 
+Not just for today.
 
-# ==================================================
-# REASONS WHY I LOVE YOU
-# ==================================================
+Not just for a few beautiful moments.
 
-st.markdown("## 🥰 Reasons Why I Love You")
+I want you in my future.
 
-for number, reason in enumerate(REASONS, start=1):
+I want to make more memories with you.
 
-    with st.container(border=True):
+I want to experience life with you.
 
-        st.markdown(f"### 💗 {number}")
+I want us to grow together, support each other, argue sometimes,
+laugh again, understand each other and always find our way back
+to one another.
 
-        st.write(reason)
+When I think about the future, I don't just imagine success,
+money or achievements.
 
+I imagine having someone beside me who I love.
 
-# ==================================================
-# WHEN YOU MISS ME
-# ==================================================
+And honestly, when I think about that person,
+I want that person to be you.
 
-st.markdown("## 🥺 When You Miss Me")
+I want to build a life with you.
 
-if st.button("Click here when you miss me 🤍"):
+I want to create a home that feels like ours.
 
-    with st.container(border=True):
+I want us to have our own little world.
 
-        st.markdown("## Come Here 🤗❤️")
+A world filled with love, laughter, memories and happiness.
 
-        st.write(
-            """
-If you are missing me right now, I want you to remember one thing.
+One day, I want us to look back at everything we went through
+and smile because we chose to stay.
 
-No matter where I am or what I am doing, there is always someone
-thinking about you.
+I want to build a family with you.
 
-Me. ❤️
+I want to experience all the beautiful parts of life with you.
 
-You can always come to me, talk to me, laugh with me,
-cry with me and share everything with me.
+The good days.
 
-You never have to feel alone when you have me. 🤍
-"""
-        )
+The difficult days.
 
+The boring days.
 
-# ==================================================
-# SURPRISE MESSAGE
-# ==================================================
+The exciting days.
 
-st.markdown("## 💕 A Little Surprise")
+I don't just want to be there when life is perfect.
 
-if st.button("Click for a message from me 💌"):
+I want to be there for all of it.
 
-    with st.container(border=True):
+For you.
 
-        message = random.choice(LOVE_MESSAGES)
-
-        st.markdown("### ❤️ For You")
-
-        st.success(message)
-
-
-# ==================================================
-# FINAL LOVE LETTER
-# ==================================================
-
-st.markdown("## 💗 And Finally...")
-
-with st.container(border=True):
-
-    st.markdown(f"### {GIRLFRIEND_NAME}")
-
-    st.write(
-        """
 I know I am not perfect.
 
 I know I make mistakes.
 
-And sometimes I may not always know the right words to say.
+And sometimes I may not express my feelings properly.
 
-But please never doubt this.
-"""
-    )
+But please never doubt one thing.
 
-    st.markdown("## I love you. ❤️")
+My feelings for you are real.
 
-    st.write(
-        """
-I love your smile.
+I care about you.
 
-I love your presence.
+I miss you.
 
-I love our memories.
+I want you in my life.
 
-And I love the person you are.
+And I genuinely want to build something beautiful with you.
 
-Thank you for being a part of my life.
+I don't know exactly what the future will look like.
 
-No matter how complicated life gets, I hope we always find
-our way back to each other. ❤️
+But if I am lucky enough to have you beside me,
+then I know I will always have someone worth fighting for.
 
-Forever grateful for you.
-"""
-    )
+You are not just someone I love.
 
-    st.markdown(f"### With all my love,")
-    st.markdown(f"## {YOUR_NAME} ❤️")
+You are someone I want to choose.
 
+Again and again.
 
-# ==================================================
-# FOOTER
-# ==================================================
+Every day.
+
+❤️
+
+I love you more than I can explain.
+
+I miss you more than you probably realise.
+
+And I hope that one day,
+we get to turn all the things we dream about
+into our real life.
+
+A life together.
+
+A home together.
+
+A family together.
+
+You and me.
+
+❤️
+
+With all my love,
+
+{YOUR_NAME}
+""")
 
 st.divider()
 
-st.markdown("### Made with ❤️ just for you")
+st.markdown("### ❤️ No matter where life takes us, you will always have a special place in my heart.")
 
-st.caption("💕 Forever Yours 💕")
+st.caption("Made with love, just for you ❤️")
