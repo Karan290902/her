@@ -1,8 +1,8 @@
 import streamlit as st
 
-# ==================================================
+# ============================================================
 # PAGE CONFIG
-# ==================================================
+# ============================================================
 
 st.set_page_config(
     page_title="For My Bubuu ❤️",
@@ -12,26 +12,46 @@ st.set_page_config(
 )
 
 
-# ==================================================
-# CUSTOMIZE HERE ❤️
-# ==================================================
+# ============================================================
+# ❤️ CUSTOMIZE HERE
+# ============================================================
 
-GIRLFRIEND_NAME = "My Bubuu ❤️"
-YOUR_NAME = "Karan ❤️"
+GIRLFRIEND_NAME = "My Bubuu"
+YOUR_NAME = "Karan"
 
 
-# ==================================================
-# CUSTOM DESIGN
-# ==================================================
+# ============================================================
+# CUSTOM CSS
+# ============================================================
 
 st.markdown("""
 <style>
 
+/* ============================================================
+   IMPORT ROMANTIC FONTS
+============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@500;600;700&display=swap');
+
+
+/* ============================================================
+   PAGE BACKGROUND
+============================================================ */
+
 .stApp {
-    background: linear-gradient(135deg, #fff5f7, #ffe6ee, #fff0f5);
+
+    background:
+        radial-gradient(circle at 10% 10%, rgba(255, 190, 210, 0.8), transparent 28%),
+        radial-gradient(circle at 90% 20%, rgba(255, 210, 225, 0.8), transparent 30%),
+        radial-gradient(circle at 50% 100%, rgba(255, 200, 215, 0.6), transparent 35%),
+        linear-gradient(135deg, #fff7f9, #ffe9ef, #fff5f8);
+
 }
 
-/* Hide Streamlit menu and branding */
+
+/* ============================================================
+   HIDE STREAMLIT ELEMENTS
+============================================================ */
 
 #MainMenu {
     visibility: hidden;
@@ -45,112 +65,245 @@ footer {
     visibility: hidden;
 }
 
-/* Main page */
+
+/* ============================================================
+   MAIN PAGE WIDTH
+============================================================ */
 
 .block-container {
-    max-width: 750px;
+
+    max-width: 780px;
+
     padding-top: 2rem;
-    padding-bottom: 3rem;
+
+    padding-bottom: 4rem;
+
 }
 
-/* Make all paragraph text dark and readable */
+
+/* ============================================================
+   MAIN TEXT
+============================================================ */
 
 [data-testid="stMarkdownContainer"] p {
-    color: #3d1f2b !important;
-    font-size: 18px !important;
-    line-height: 1.8 !important;
+
+    font-family: 'Cormorant Garamond', serif !important;
+
+    color: #4b2632 !important;
+
+    font-size: 23px !important;
+
+    line-height: 1.7 !important;
+
 }
 
-/* Headings */
+
+/* ============================================================
+   MAIN HEADINGS
+============================================================ */
 
 h1 {
-    color: #d6336c !important;
-    text-align: center;
+
+    font-family: 'Great Vibes', cursive !important;
+
+    color: #c2185b !important;
+
+    font-size: 68px !important;
+
+    text-align: center !important;
+
+    margin-bottom: 5px !important;
+
 }
+
 
 h2 {
-    color: #d6336c !important;
+
+    font-family: 'Playfair Display', serif !important;
+
+    color: #c2185b !important;
+
+    text-align: center !important;
+
 }
+
 
 h3 {
-    color: #b52a5a !important;
+
+    font-family: 'Playfair Display', serif !important;
+
+    color: #d6336c !important;
+
+    text-align: center !important;
+
 }
 
-/* Card */
+
+/* ============================================================
+   LOVE LETTER CARD
+============================================================ */
 
 [data-testid="stVerticalBlockBorderWrapper"] {
-    background-color: rgba(255, 255, 255, 0.92);
-    border-radius: 20px;
-    border-color: rgba(214, 51, 108, 0.2);
-    box-shadow: 0 8px 25px rgba(214, 51, 108, 0.08);
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.96),
+            rgba(255,248,250,0.90)
+        );
+
+    border:
+
+        1px solid rgba(214, 51, 108, 0.18) !important;
+
+    border-radius: 30px !important;
+
+    box-shadow:
+
+        0px 15px 45px rgba(190, 50, 95, 0.13) !important;
+
+    padding: 12px;
+
 }
 
-/* Caption */
+
+/* ============================================================
+   DIVIDER
+============================================================ */
+
+hr {
+
+    border: none !important;
+
+    height: 1px !important;
+
+    background:
+
+        linear-gradient(
+            to right,
+            transparent,
+            #e89ab3,
+            transparent
+        ) !important;
+
+    margin-top: 35px !important;
+
+    margin-bottom: 35px !important;
+
+}
+
+
+/* ============================================================
+   CAPTION
+============================================================ */
 
 [data-testid="stCaptionContainer"] {
-    text-align: center;
+
+    text-align: center !important;
+
+    color: #8f4a61 !important;
+
+    font-family: 'Playfair Display', serif !important;
+
+    font-size: 16px !important;
+
 }
 
-/* Mobile */
+
+/* ============================================================
+   MOBILE DESIGN
+============================================================ */
 
 @media (max-width: 600px) {
 
     .block-container {
-        padding-left: 15px;
-        padding-right: 15px;
+
+        padding-left: 18px;
+
+        padding-right: 18px;
+
         padding-top: 1.5rem;
+
     }
 
-    [data-testid="stMarkdownContainer"] p {
-        font-size: 17px !important;
-        line-height: 1.75 !important;
+
+    h1 {
+
+        font-size: 54px !important;
+
     }
+
+
+    h2 {
+
+        font-size: 27px !important;
+
+    }
+
+
+    [data-testid="stMarkdownContainer"] p {
+
+        font-size: 20px !important;
+
+        line-height: 1.65 !important;
+
+    }
+
 }
 
 </style>
 """, unsafe_allow_html=True)
 
 
-# ==================================================
-# HEADER
-# ==================================================
+# ============================================================
+# HERO SECTION
+# ============================================================
 
 st.markdown("# ❤️")
 
-st.markdown(f"# Hey {GIRLFRIEND_NAME}")
+st.markdown(f"# {GIRLFRIEND_NAME}")
 
-st.caption("There are some things I want you to know... ❤️")
+st.caption("A little piece of my heart, written only for you ❤️")
 
 st.divider()
 
 
-# ==================================================
+# ============================================================
 # LOVE LETTER
-# ==================================================
+# ============================================================
 
 with st.container(border=True):
 
-    st.markdown("## 💌 From My Heart To Yours")
+    st.markdown("## 💌 My Love, Read This Slowly")
 
-    st.markdown(f"""
+    st.markdown("""
 
 My love,
 
-I don't know if I will ever be able to find the perfect words to explain how much you truly mean to me.
+I don't know if there will ever be enough words in this world to explain what you truly mean to me.
 
-Sometimes I feel like no matter how many times I say **I love you**, those three words are still not enough to describe what I feel for you.
+Sometimes I sit and think about you, about us, about all the little moments we have shared, and I realise something.
 
-You have become such an important part of my life.
+You have become so much more than just someone I love.
 
-You are someone I think about during my day.
+You have become someone who lives in my thoughts.
 
-You are someone I want to share my happiness with.
+Someone whose happiness matters to me.
 
-You are someone I want to talk to when something happens.
+Someone I want to talk to when something good happens.
 
-And you are someone I miss even when we have just spoken.
+Someone I want to run to when life becomes difficult.
 
-I miss you more than I can explain.
+And someone I miss even when we have just spoken.
+
+""")
+
+    st.markdown("### ❤️ I Miss You More Than You Know")
+
+    st.markdown("""
+
+I miss you.
 
 I miss talking to you.
 
@@ -158,9 +311,27 @@ I miss hearing from you.
 
 I miss your presence.
 
-And sometimes, I simply miss having you close to me.
+I miss the feeling of having you close to me.
 
-But more than just missing you, I want you.
+Sometimes I don't even know exactly what I miss the most.
+
+Maybe it's your voice.
+
+Maybe it's our conversations.
+
+Maybe it's the comfort of knowing that you are there.
+
+Or maybe it's simply you.
+
+Because when someone becomes important to your heart, their absence is something you feel.
+
+And I feel yours.
+
+""")
+
+    st.markdown("### 💕 I Don't Just Want You For Today")
+
+    st.markdown("""
 
 I want you to be a part of my life.
 
@@ -168,107 +339,211 @@ Not just for today.
 
 Not just for a few beautiful moments.
 
-**I want you in my future.**
+Not just until things become difficult.
 
-I want to make more memories with you.
+I want you in my future.
 
-I want to experience life with you.
+I want more memories with you.
 
-I want us to grow together, support each other, laugh together, understand each other, and always find our way back to one another.
+I want more laughs with you.
 
-When I think about the future, I don't just imagine success, money or achievements.
+I want more silly conversations.
 
-I imagine having someone beside me who I love.
+I want to learn more about you as time passes.
 
-And honestly, when I think about that person, **I want that person to be you.**
+I want us to grow together.
 
-I want to build a life with you.
+I want us to support each other.
 
-I want to create a home that feels like ours.
+And even when life becomes complicated, I want us to always find our way back to each other.
 
-I want us to have our own little world.
+""")
 
-A world filled with love, laughter, memories and happiness.
+    st.markdown("### 🏡 When I Think About My Future...")
 
-One day, I want us to look back at everything we went through and smile because we chose to stay.
+    st.markdown("""
 
-**I want to build a family with you.**
+When I think about the future, I don't only imagine success, money or achievements.
 
-I want to experience all the beautiful parts of life with you.
+I imagine peace.
 
-The good days.
+I imagine coming home after a long day and having someone I love beside me.
 
-The difficult days.
+I imagine sharing my happiness and my problems with one person.
 
-The boring days.
+I imagine building something that belongs to both of us.
+
+And honestly...
+
+When I imagine that person beside me,
+
+I want that person to be you.
+
+""")
+
+    st.markdown("### 💍 I Want To Build A Life With You")
+
+    st.markdown("""
+
+I want us to create our own little world.
+
+A home that feels like ours.
+
+A place filled with laughter, love, memories and comfort.
+
+I want to experience the beautiful parts of life with you.
 
 The exciting days.
 
-I don't just want to be there when life is perfect.
+The boring days.
 
-**I want to be there for all of it.**
+The difficult days.
+
+The days when everything goes perfectly.
+
+And the days when nothing does.
+
+Because I don't just want to be there when life is beautiful.
+
+I want to be there for all of it.
 
 For you.
 
-I know I am not perfect.
+""")
+
+    st.markdown("### 👨‍👩‍👧‍👦 I Dream About Having A Family With You")
+
+    st.markdown("""
+
+One day, I hope we get to build a family together.
+
+Our own little family.
+
+Our own home.
+
+Our own memories.
+
+Our own traditions.
+
+I want us to grow older together and one day look back at everything we went through.
+
+The good moments.
+
+The difficult moments.
+
+The times we laughed until we couldn't breathe.
+
+The times we had to be strong.
+
+And I hope we can smile and say...
+
+We stayed.
+
+We chose each other.
+
+We made it.
+
+""")
+
+    st.markdown("### 🤍 I Know I Am Not Perfect")
+
+    st.markdown("""
 
 I know I make mistakes.
 
-And sometimes I may not express my feelings properly.
+I know sometimes I don't understand things immediately.
 
-But please never doubt one thing.
+Sometimes I may not express what I feel properly.
 
-**My feelings for you are real.**
+Sometimes I may fail to say the right thing.
+
+But please never doubt this.
+
+My feelings for you are real.
 
 I care about you.
 
 I miss you.
 
-I want you in my life.
+I want you.
 
-And I genuinely want to build something beautiful with you.
+And I genuinely want you to be a part of my life.
 
-I don't know exactly what the future will look like.
+""")
 
-But if I am lucky enough to have you beside me, then I know I will always have someone worth fighting for.
+    st.markdown("### ❤️ If I Had To Choose Again...")
 
-You are not just someone I love.
+    st.markdown("""
 
-You are someone I want to choose.
+I would still choose you.
 
-Again and again.
+Again.
 
-Every day.
+And again.
+
+And again.
+
+Not because everything is always perfect.
+
+But because when I look at you, I see someone I genuinely want to try for.
+
+Someone worth understanding.
+
+Someone worth choosing.
+
+Someone worth building a future with.
+
+""")
+
+    st.markdown("## ❤️ I Love You")
+
+    st.markdown(f"""
+
+I love you more than I know how to explain.
+
+I miss you more than you probably realise.
+
+And I want more than just memories with you.
+
+I want a life with you.
+
+A home with you.
+
+A family with you.
+
+A future with you.
+
+You and me.
+
+Through the beautiful days.
+
+Through the difficult days.
+
+Through everything.
+
+And if life gives me the chance,
+
+I hope one day all the things I dream about...
+
+are things I get to live with you.
+
+Forever.
 
 ❤️
 
-**I love you more than I can explain.**
-
-**I miss you more than you probably realise.**
-
-And I hope that one day, we get to turn all the things we dream about into our real life.
-
-A life together.
-
-A home together.
-
-A family together.
-
-**You and me. ❤️**
-
 With all my love,
 
-## {YOUR_NAME}
+## {YOUR_NAME} ❤️
 
 """)
 
 
-# ==================================================
-# FINAL MESSAGE
-# ==================================================
+# ============================================================
+# FOOTER
+# ============================================================
 
 st.divider()
 
-st.markdown("### ❤️ Made with all my love, just for you")
+st.markdown("### ❤️ Always Yours")
 
-st.markdown("### 💕 Forever Yours 💕")
+st.caption("Made with all my heart, just for you 💕")
